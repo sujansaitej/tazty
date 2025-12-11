@@ -77,7 +77,7 @@
 
 ### Footer Content to Add
 
-```
+\`\`\`
 Products:
 - Buyer App (Live) - https://play.google.com/store/apps/details?id=in.tazty.buyer
 - Seller App (Live) - https://play.google.com/store/apps/details?id=in.tazty.seller
@@ -112,7 +112,7 @@ Operation Address:
 Madurai, Tamil Nadu 625002
 
 Copyright: Valar Digital Commerce Private Limited
-```
+\`\`\`
 
 ### Technical Notes
 

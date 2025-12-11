@@ -98,6 +98,7 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   category: "food",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
