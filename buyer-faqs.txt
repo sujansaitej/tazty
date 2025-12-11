@@ -1,0 +1,119 @@
+Frequently Asked Questions
+Find answers to common questions about using Tazty Food Order & Delivery App
+
+1. What is Tazty?
+Tazty is a food ordering and delivery app connecting customers with restaurants in Madurai and nearby areas.
+
+Note: Tazty does not cook or sell food. Restaurants prepare the food, and Tazty handles ordering and delivery.
+
+2. How do I create an account?
+Download the Tazty app
+Sign up using your mobile number
+Login using OTP (no password needed)
+Add your name, email (optional), and address
+Your account becomes active after OTP verification.
+
+3. How do I place an order?
+Open the app → choose a restaurant
+Browse the menu → add items to cart
+Choose payment method → confirm order
+You will receive real-time updates until delivery.
+
+4. Why was my order not accepted?
+Possible reasons:
+
+Item unavailable
+High order volume
+Restaurant temporarily closed
+Operational/technical issues
+Delivery location out of range
+If payment was taken, you will receive a full automatic refund.
+
+5. Can I cancel my order?
+The in-app cancellation feature will be available soon.
+
+For now, please contact Tazty support if you want to cancel an order.
+
+6. How long does delivery take?
+Delivery time depends on restaurant prep time, distance, traffic, weather, and delivery partner availability.
+
+You can track your order live in the app.
+
+7. How do I track my order?
+The app shows:
+
+Restaurant acceptance
+Preparation progress
+Delivery partner assignment
+Live location (when available)
+Estimated delivery time
+8. What payment methods are supported?
+Currently supported:
+
+UPI
+Debit/Credit Cards
+Net Banking
+Note: Wallets and Cash on Delivery (COD) are not available.
+
+9. Payment deducted but order not confirmed?
+A refund will be automatically issued.
+
+Refund time: 2–5 working days (varies by bank).
+
+If not received after 7 days, contact support.
+
+10. Wrong, missing, or damaged items?
+Please call or email customer care within 2 hours of receiving your order.
+
+Share:
+
+Photos or videos showing the issue
+Your order number
+Support will review and assist with refunds or resolutions.
+
+11. Order marked delivered but not received?
+May happen due to incorrect address, unreachable phone, access issues, or delivery left with security/neighbor.
+
+Report immediately to Tazty support for investigation.
+
+12. Ratings & reviews
+You can leave ratings and reviews after order completion.
+
+Reviews may be removed only if they contain abuse, spam, fake content, or personal information.
+
+13. Are there delivery charges or extra fees?
+Charges may include:
+
+Delivery charges
+Packaging charges
+Platform service fees
+GST or other applicable taxes
+No surge fees are applied.
+
+14. Why is a restaurant not available?
+Reasons may include service area limits, restaurant closure, high demand, operational issues, or app downtime.
+
+15. How do I update my profile?
+Go to Profile → Edit Profile to update name, email, and addresses.
+
+For mobile number changes, contact support.
+
+16. Is my data secure?
+Yes. Tazty uses secure encryption, protected payment gateways, access controls, and follows DPDP Act 2023 guidelines.
+
+17. How do I delete my account?
+Submit a request through:
+
+In-app support
+Email: support@tazty.insupport@tazty.in
+Your data will be deleted/anonymized after verification and legal checks.
+
+18. How do I contact Tazty support?
+Email: support@tazty.insupport@tazty.in
+Phone: +91 9952520699+91 9952520699
+In-app Support
+Include your order number for faster help.
+
+© 2025 Tazty. All rights reserved. Owned by Valar Digital Commerce Private Limited.
+
+Still have questions? Contact us atsupport@tazty.in

@@ -30,7 +30,7 @@ export function Features() {
   ]
 
   return (
-    <section className="py-20 lg:py-32 bg-white">
+    <section id="features" className="py-20 lg:py-32 bg-white">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <h2 className="mb-4 text-balance text-4xl font-bold lg:text-5xl text-gray-900">

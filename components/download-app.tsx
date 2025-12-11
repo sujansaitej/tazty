@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function DownloadApp() {
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-[#00C853] to-[#00A843] relative overflow-hidden">
+    <section id="download" className="py-20 lg:py-32 bg-gradient-to-br from-[#00C853] to-[#00A843] relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-white blur-3xl" />

@@ -1,0 +1,288 @@
+Partner Terms & Conditions
+Last updated: November 5, 2025
+
+These Terms and Conditions ("Terms" or "Agreement") form a legally binding agreement between you ("Partner", "Seller", "Restaurant", "Merchant" or "you") and Valar Digital Commerce Pvt. Ltd. operating as Tazty ("Tazty", "Valar", "we", "us", "our") governing your participation as a seller/partner on the Tazty platform, Valar Seller App, mobile applications, website, and related services (collectively, the "Platform"), including integrations with ONDC network participants where applicable. By registering as a Partner, accessing or using the Platform, or accepting orders through the Platform, you accept and agree to be bound by these Terms. If you do not agree, do not use the Platform as a Partner.
+
+1. Regulatory Status
+Tazty operates as a technology platform and marketplace intermediary under the Information Technology Act, 2000 and in accordance with the Consumer Protection (E-Commerce) Rules, 2020. Tazty facilitates transactions between Buyers and Partners but does not manufacture, prepare, pack, sell or deliver goods directly. Partners operate as independent sellers and are responsible for their own business operations, compliance, and legal obligations. Delivery services for orders placed through the Tazty platform are managed and coordinated by Valar Digital Commerce Private Limited (or its designated logistics partners) to ensure timely and efficient fulfillment of food delivery orders. For merchants operating via ONDC, transactions are subject to ONDC network protocols and specifications.
+
+2. Definitions
+Partner/Seller — restaurant, merchant, retailer, or other business entity offering products or services on the Platform.
+Buyer/User — any individual or entity that places orders through the Platform.
+Delivery Partner — independent third party contracted by Valar Digital Commerce Private Limited to pick up and deliver orders placed through the Tazty platform. Delivery services are managed and coordinated by Valar to ensure efficient order fulfillment.
+Order — a confirmed request for goods or services placed by a Buyer via the Platform.
+Platform — Tazty's mobile application, website, and related technology services.
+Commission — the fee charged by Tazty for facilitating transactions on the Platform.
+Service Area — the geographic area in which Tazty operates and where Partners may receive orders.
+3. Eligibility and Partner Registration
+To become a Partner on the Platform, you must:
+
+Be a legally registered business entity (proprietorship, partnership, LLP, or company) in India;
+Possess all necessary licenses, permits, and registrations required to operate your business, including but not limited to FSSAI license, GST registration, and any local municipal licenses;
+Have a valid business bank account in India;
+Be located within Tazty's service area (currently Madurai, Tamil Nadu);
+Provide accurate and complete information during registration, including business name, address, contact details, tax identification numbers, and bank account information;
+Maintain the confidentiality of your Partner account credentials and notify Tazty immediately of any unauthorized access.
+Tazty reserves the exclusive right to assign, manage, onboard, suspend, or terminate partners on the Platform at its sole discretion, in accordance with these Terms and applicable policies. Tazty may verify your eligibility, request additional documentation, and reject or suspend Partner applications at its sole discretion. Tazty maintains full authority to determine partner eligibility, manage partner relationships, and make decisions regarding partner participation on the Platform.
+
+4. Account Setup and Onboarding
+Upon approval of your Partner application, you will be required to:
+
+Complete your Partner profile with accurate business information, menu items, pricing, images, and descriptions;
+Set up your operating hours and availability on the Platform;
+Configure payment and settlement preferences;
+Undergo training on Platform usage, order management, and Tazty policies (if required);
+Agree to the Commission structure and payment terms.
+You are responsible for maintaining accurate and up-to-date information on your Partner profile. Tazty may suspend or terminate accounts with inaccurate, misleading, or outdated information.
+
+5. Partner Obligations and Responsibilities
+5.1 Product and Service Quality
+You are solely responsible for:
+
+The quality, safety, freshness, and compliance of all products and services you offer on the Platform;
+Accurate product descriptions, pricing, nutritional information, allergen information, and ingredient lists;
+Proper food handling, storage, preparation, and packaging in accordance with FSSAI guidelines and applicable food safety laws;
+Maintaining hygiene standards and food safety certifications;
+Compliance with all applicable laws, regulations, and standards including FSSAI, GST, labor laws, and local municipal regulations.
+5.2 Order Fulfillment
+You agree to:
+
+Accept and fulfill orders placed through the Platform in a timely manner, subject to your operating hours and availability;
+Prepare orders according to the specifications provided by Buyers and within the estimated preparation time displayed on the Platform;
+Notify Tazty immediately if you are unable to fulfill an order due to item unavailability, operational constraints, or other legitimate reasons;
+Ensure that orders are ready for pickup by Delivery Partners at the agreed time. Delivery services for Tazty food delivery orders are managed and coordinated by Valar Digital Commerce Private Limited (or its designated logistics partners), and you acknowledge that Tazty reserves the right to assign and manage delivery partners for order fulfillment;
+Package orders appropriately to maintain quality and safety during transit.
+5.3 Pricing and Menu Management
+You are responsible for:
+
+Setting accurate prices for all menu items displayed on the Platform;
+Ensuring that prices include all applicable taxes (GST) and that tax information is correctly displayed;
+Updating menu items, prices, and availability in real-time on the Platform;
+Notifying Tazty of any significant price changes or menu updates;
+Honoring prices displayed on the Platform at the time of order placement.
+Pricing Standards and Reasonableness: All item pricing must be in accordance with market standards and must be reasonable, fair, and competitive. Tazty's primary goal is to provide good quality products to customers at fair prices. Partners must ensure that their pricing reflects market rates and does not engage in price gouging, unfair pricing practices, or misleading pricing strategies.
+
+Quality Commitment: Tazty is committed to ensuring that customers receive good quality products. Partners must maintain quality standards that align with the prices charged and customer expectations. Quality, pricing, and value proposition must be consistent and transparent.
+
+Tazty's Authority on Pricing and Quality Issues: Tazty reserves the right to review, monitor, and take decisions regarding item pricing, quality standards, and customer complaints. In cases of:
+
+Pricing Discrepancies: If Tazty identifies pricing that is not in line with market standards, is unreasonably high, or appears to be unfair or misleading, Tazty may request price adjustments, suspend items, or take other corrective measures;
+Quality Issues and Faults: If there are complaints, discrepancies, or identified faults related to product quality, pricing, or service delivery, Tazty has the right to investigate, take corrective measures, require quality improvements, adjust pricing, or take other actions as deemed necessary;
+Customer Complaints: Tazty has the authority to address customer complaints related to pricing, quality, or service issues. This may include requiring refunds, price adjustments, quality improvements, or other remedial actions. Tazty's decisions on such matters are final and binding;
+Corrective Actions: Tazty may, at its sole discretion, take various measures including but not limited to: requesting price revisions, suspending items or menu categories, requiring quality certifications, implementing quality control measures, adjusting commission rates, or suspending or terminating Partner accounts in cases of repeated or serious violations.
+Partners acknowledge that Tazty's decisions regarding pricing discrepancies, quality issues, faults, and customer complaints are made in the best interest of maintaining platform integrity, customer satisfaction, and fair marketplace practices. Partners must comply with Tazty's decisions and take corrective actions as required.
+
+5.4 Branding and Packaging Guidelines
+To maintain brand consistency and ensure a professional customer experience, Partners must comply with Tazty's branding guidelines for packaging and promotional materials:
+
+Packaging Requirements: All orders placed through the Tazty platform must be packaged using materials that comply with Tazty's branding guidelines, including but not limited to food containers, bags, and wrapping materials. Partners must use Tazty-branded packaging materials, stickers, or labels as provided or approved by Tazty for orders placed through the Platform;
+Branding Stickers and Labels: Partners must affix Tazty-branded stickers, labels, or seals on all order packaging as specified in the branding guidelines. These materials must be applied correctly and visibly to ensure brand recognition and order identification;
+Branding Material Compliance: Partners must use only Tazty-approved branding materials, stickers, and packaging supplies. Unauthorized use of Tazty trademarks, logos, or branding elements, or modification of approved materials, is strictly prohibited;
+Material Quality and Standards: All packaging and branding materials must meet quality standards specified by Tazty and must not compromise food safety, hygiene, or product integrity during transit;
+Guideline Updates: Tazty may update branding guidelines from time to time, and Partners will be notified of such changes. Partners must comply with updated guidelines within the specified timeframe;
+Non-Compliance: Failure to comply with branding and packaging guidelines may result in warnings, penalties, or suspension of Partner account, as determined by Tazty at its sole discretion.
+Partners will receive detailed branding guidelines, including specifications for packaging materials, sticker placement, and approved suppliers, during onboarding or through the Partner dashboard. For questions or clarifications regarding branding requirements, contact Tazty Partner Support.
+
+5.5 Offers, Discounts, and Promotions
+To ensure consistent pricing, fair competition, and optimal customer experience, all offers, discounts, and promotional campaigns on the Platform are managed and coordinated by the Tazty team:
+
+Promotion Management: Tazty reserves the exclusive right to create, manage, modify, and terminate offers, discounts, coupons, promotional campaigns, and special deals displayed on the Platform. All promotional activities, including discount percentages, promotional codes, cashback offers, and special event campaigns, are centrally managed by Tazty;
+Partner Participation: Partners may be invited to participate in promotional campaigns organized by Tazty. Participation terms, including discount sharing arrangements, promotional periods, and eligibility criteria, will be communicated to Partners in advance;
+Promotion Approval: Partners must not independently create, modify, or display unauthorized offers, discounts, or promotional materials on the Platform without prior written approval from Tazty. Any promotional activities must be coordinated through and approved by the Tazty team;
+Promotional Pricing: Partners must honor all promotional prices, discounts, and offers as displayed on the Platform during the promotional period. Partners are responsible for ensuring that promotional pricing is accurately reflected in order fulfillment and settlement calculations;
+Contact for Promotions: Partners interested in participating in promotional campaigns, requesting promotional support, or seeking clarification on promotional guidelines should contact the Tazty Partner Support team or designated promotion management team through the contact channels provided in Section 19 (Contact);
+Promotional Terms and Conditions: All offers, discounts, and promotions are subject to terms and conditions set by Tazty, including validity periods, minimum order values, maximum discount limits, and eligibility criteria. Partners must comply with these terms and conditions;
+Promotion Modifications: Tazty may modify, suspend, or terminate promotional campaigns at any time at its sole discretion. Partners will be notified of significant changes affecting active promotions, and Partners must comply with updated promotional terms;
+Unauthorized Promotions: Partners found to be creating, displaying, or implementing unauthorized promotions, discounts, or offers outside of Tazty's approved promotional framework may face warnings, penalties, or suspension of Partner account.
+For inquiries, requests, or support related to offers, discounts, and promotional campaigns, Partners should contact Tazty Partner Support at partners@tazty.in or through the Partner dashboard support channels.
+
+5.6 Restaurant Timings and Order Acceptance
+Partners have the option and responsibility to manage their restaurant operating hours and order acceptance timings through the Partner dashboard or Platform interface.
+
+Partner-Controlled Timings: Partners can update their restaurant opening and closing timings, as well as order acceptance windows, through the Platform. Partners are solely responsible for setting accurate operating hours that reflect their actual business availability;
+Real-Time Updates: When Partners update their restaurant timings or order acceptance settings, these changes will be immediately reflected on the Tazty Food Delivery app. Updates are processed in real-time to ensure customers see current availability and can place orders accordingly;
+Partner Responsibility: Partners are solely responsible for managing and maintaining accurate restaurant timings and order acceptance settings. Tazty does not manage, control, or assume responsibility for restaurant operating hours or order acceptance timings set by Partners. Partners must ensure that their timings accurately reflect their actual business operations and availability;
+Order Acceptance During Operating Hours: Partners are expected to accept and fulfill orders placed during their specified operating hours. Failure to accept orders during declared operating hours may impact Partner ratings and visibility;
+Timing Accuracy: Partners must maintain accurate and up-to-date operating hours. Misleading or inaccurate timing information may result in customer complaints, order cancellations, and may lead to penalties or account suspension;
+Tazty's App Operation Hours: Notwithstanding Partners' control over their restaurant timings, Tazty reserves the exclusive right to maintain and manage the Tazty Food Delivery app's overall operation hours based on Tazty's business guidelines, operational requirements, and strategic considerations. Tazty may set platform-wide operating hours, maintenance windows, or service availability periods that may differ from individual restaurant timings;
+Platform-Wide Controls: Tazty may implement platform-wide controls, restrictions, or modifications to app operation hours for reasons including but not limited to: system maintenance, technical updates, operational optimization, compliance requirements, or business strategy. Such controls may temporarily or permanently affect when the app accepts orders or displays restaurants, regardless of individual restaurant timings;
+No Guarantee of Continuous Service: Partners acknowledge that Tazty may suspend, restrict, or modify app operations during certain hours or periods as determined by Tazty. Tazty does not guarantee continuous, uninterrupted app availability and reserves the right to manage app operation hours independently of individual restaurant timings;
+Coordination and Communication: Partners should coordinate their timing updates with Tazty's app operation hours where applicable. Tazty will make reasonable efforts to communicate significant changes to platform-wide operation hours, but Partners are responsible for staying informed about app availability and operation schedules.
+Limitation of Liability: Tazty shall not be liable for any losses, damages, or business impact resulting from Partners' timing management decisions, timing inaccuracies, or changes to restaurant operating hours. Partners acknowledge that Tazty's management of app operation hours is independent of individual restaurant timings and is at Tazty's sole discretion.
+
+6. Commission, Fees and Payment Terms
+6.1 Commission Structure
+Tazty charges a commission fee (the "Commission") on each order fulfilled through the Platform. The Commission rate, payment schedule, and any additional fees will be communicated to you during onboarding and may be updated from time to time with prior notice.
+
+Commission is calculated on the order value (excluding taxes, delivery fees, and platform service fees) and is deducted from your settlement amount.
+
+6.2 Settlement and Payments
+Tazty will settle payments to Partners according to the agreed schedule (typically weekly or bi-weekly) via bank transfer to the account provided during registration. Settlement amounts will be:
+
+Order value (excluding taxes) minus Commission and any applicable fees;
+Subject to deductions for refunds, chargebacks, penalties, or other adjustments as per this Agreement;
+Accompanied by a settlement statement detailing orders, commissions, and deductions.
+6.3 Taxes and Invoicing
+Partners are responsible for:
+
+Collecting and remitting all applicable taxes (GST) on sales made through the Platform;
+Issuing tax invoices to Buyers as required by law;
+Providing Tazty with valid GST registration details and tax invoices for Commission payments (if applicable).
+7. Order Management and Cancellations
+7.1 Order Acceptance
+Orders placed through the Platform are binding commitments. You must accept or reject orders promptly. Failure to respond within the specified time may result in automatic acceptance or cancellation, and may impact your Partner rating.
+
+7.2 Order Cancellations by Partner
+You may cancel orders only for legitimate reasons including:
+
+Item unavailability (notify immediately upon receiving order);
+Operational constraints (kitchen closure, equipment failure, etc.);
+Force majeure events;
+Buyer request for cancellation (before preparation begins).
+Frequent cancellations or cancellations after preparation has begun may result in penalties, suspension, or termination of your Partner account.
+
+7.3 Refunds and Chargebacks
+If an order is cancelled by you or if a Buyer is entitled to a refund (as per Tazty's refund policy), the refund amount will be deducted from your settlement. You are responsible for refunds arising from:
+
+Your cancellation of orders;
+Wrong, damaged, expired, or substandard items delivered to Buyers;
+Non-compliance with order specifications;
+Any breach of this Agreement by you.
+8. Restaurant Visibility, Ratings, Reviews and Listing Management
+8.1 Ratings and Reviews
+Buyers may rate and review your products and services on the Platform. You acknowledge that:
+
+Ratings and reviews are the opinions of Buyers and Tazty does not endorse or guarantee their accuracy;
+Low ratings or negative reviews may impact your visibility and ranking on the Platform;
+You may respond to reviews professionally, but must not harass, threaten, or offer incentives to Buyers in exchange for positive reviews;
+Tazty reserves the right to remove reviews that violate Platform policies or applicable laws.
+8.2 Restaurant Visibility on Tazty Food Delivery App
+Restaurant visibility on the Tazty food delivery app refers to how prominently your restaurant appears in search results, category listings, and recommendations shown to customers. Visibility is dynamic and may vary based on multiple factors. Tazty reserves the exclusive right to manage, control, and adjust restaurant listings and visibility on the Platform.
+
+8.3 Impact of Ratings and Reviews on Visibility
+Customer ratings and reviews significantly impact your restaurant's visibility and ranking on the Platform. Factors include:
+
+Overall Rating Score: Restaurants with higher average ratings generally receive better visibility and appear higher in search results and recommendations;
+Review Volume and Recency: The number of reviews and how recent they are can influence visibility. Restaurants with consistent, recent positive reviews may receive enhanced visibility;
+Review Quality and Sentiment: The content and sentiment of reviews, including specific feedback about food quality, service, and delivery experience, may affect visibility;
+Negative Review Impact: Low ratings, negative reviews, or complaints about food quality, service, or delivery may result in reduced visibility, lower ranking, or temporary suspension from search results;
+Review Authenticity: Tazty monitors for fake, fraudulent, or manipulated reviews. Restaurants found to have engaged in review manipulation may face penalties including reduced visibility or account suspension.
+8.4 Filtering and Sorting Algorithms
+The Tazty food delivery app uses filtering and sorting algorithms to determine restaurant visibility and order of appearance in search results and listings. These algorithms consider multiple factors, which may include but are not limited to:
+
+Customer Location: Restaurants are filtered and sorted based on the customer's delivery location. Restaurants closer to the customer's location or within the delivery radius may appear higher in results. Location-based filtering ensures customers see restaurants that can deliver to their area;
+Delivery Time: Estimated delivery time is a key factor in sorting. Restaurants with faster estimated delivery times may appear higher in search results. Delivery time calculations consider preparation time, distance, and logistics efficiency;
+Customer Reviews and Ratings: Overall rating scores, review counts, and review recency significantly influence sorting. Restaurants with higher ratings and more positive reviews typically appear higher in results;
+Order History and Performance: Historical order fulfillment rates, cancellation rates, and on-time delivery performance may affect visibility;
+Availability and Operating Hours: Restaurants that are currently open and accepting orders may appear higher than closed restaurants;
+Promotional Activity: Restaurants participating in active promotional campaigns may receive enhanced visibility during the promotional period;
+Relevance and Search Terms: For search queries, restaurants matching search terms, cuisine types, or menu items may be prioritized;
+Platform Policies and Quality Standards: Compliance with Platform policies, quality standards, and operational requirements may influence visibility.
+Algorithm Updates: Tazty may update, modify, or change filtering and sorting algorithms at any time to improve customer experience, optimize delivery efficiency, or enhance platform functionality. Algorithm changes may affect restaurant visibility, and Tazty is not obligated to disclose specific algorithm details or provide advance notice of changes.
+
+8.5 Tazty's Rights to Manage Restaurant Listings
+Tazty reserves the exclusive right to manage, control, and make decisions regarding restaurant listings on the Platform. This includes but is not limited to:
+
+Listing Approval and Onboarding: Tazty has the right to approve, reject, or conditionally approve restaurant listings based on eligibility, compliance, quality standards, and business considerations;
+Visibility and Ranking Control: Tazty may adjust restaurant visibility, ranking, and appearance in search results based on performance metrics, customer feedback, quality standards, compliance status, or other factors deemed relevant;
+Listing Modifications: Tazty may modify restaurant information, categories, tags, or listing details to ensure accuracy, compliance, or improve customer experience;
+Promotion and Featuring: Tazty may feature, promote, or highlight certain restaurants in special sections, banners, or recommendations based on performance, promotional campaigns, or strategic considerations;
+Visibility Reduction or Suspension: Tazty may reduce visibility, temporarily hide, or suspend restaurant listings due to poor ratings, negative reviews, quality issues, policy violations, operational problems, or other reasons as determined by Tazty;
+Category and Filter Management: Tazty controls restaurant categorization, filter options, and how restaurants appear in different categories or filters;
+Search Result Management: Tazty manages how restaurants appear in search results, including order, visibility, and filtering based on algorithm factors and business considerations;
+Listing Removal: Tazty may remove restaurant listings from the Platform for violations of these Terms, policy breaches, quality issues, or other reasons as determined by Tazty at its sole discretion.
+No Guarantee of Visibility: Tazty does not guarantee any specific level of visibility, ranking, or appearance in search results. Restaurant visibility is dynamic and may change based on algorithm factors, customer behavior, performance metrics, and Tazty's business decisions. Partners acknowledge that visibility is not a guaranteed right and may vary over time.
+
+Transparency and Communication: While Tazty may provide general guidance on factors affecting visibility, Tazty is not obligated to disclose specific algorithm details, ranking factors, or provide real-time visibility metrics. Partners are encouraged to focus on maintaining quality, customer satisfaction, and compliance to improve their visibility prospects.
+
+8.6 Brand Protection and Content License
+You grant Tazty a perpetual, worldwide, royalty-free license to use your business name, logo, menu items, images, and other content you provide for Platform operations, marketing, and promotional purposes.
+
+9. Prohibited Activities and Partner Conduct
+Partners must not engage in prohibited activities including but not limited to:
+
+Providing false, misleading, or inaccurate information about products, prices, or business credentials;
+Manipulating ratings, reviews, or Platform algorithms through fraudulent means;
+Offering products or services that are illegal, unsafe, or violate applicable laws or Platform policies;
+Circumventing Platform fees or Commission by directing Buyers to transact outside the Platform;
+Abusing or harassing Buyers, Delivery Partners, or Tazty staff;
+Using automated means (bots, scrapers) to access or manipulate Platform data;
+Violating intellectual property rights of Tazty or third parties;
+Engaging in any fraudulent, deceptive, or illegal activities.
+Violation of this section may result in warnings, penalties, suspension, permanent termination of your Partner account, and legal action.
+
+10. Intellectual Property
+All Platform content including trademarks, logos, software, designs, and documentation are the exclusive property of Tazty or its licensors. You are granted a limited, non-exclusive, non-transferable license to use the Platform solely for the purpose of operating as a Partner. You shall not copy, modify, distribute, reproduce, reverse-engineer, or create derivative works of the Platform without express written consent.
+
+You retain ownership of your business name, logo, menu items, and other proprietary content, but grant Tazty the license described in Section 8 above.
+
+11. Suspension, Termination and Account Closure
+Tazty may suspend or terminate your Partner account immediately, without prior notice, for:
+
+Breach of these Terms or Platform policies;
+Fraudulent activity, misrepresentation, or illegal conduct;
+Repeated order cancellations or poor performance metrics;
+Failure to maintain required licenses, permits, or compliance;
+Non-payment of fees, penalties, or amounts owed to Tazty;
+Any activity that harms Tazty's reputation, business, or users.
+Upon termination, you must immediately cease using the Platform, settle all outstanding amounts, and Tazty may retain data as required by law or for business purposes. You may request account closure by contacting Tazty support, subject to settlement of all obligations.
+
+12. Indemnity
+You agree to indemnify, defend and hold harmless Tazty and its affiliates, officers, directors, employees, agents, and Delivery Partners from and against any claims, losses, liabilities, damages, costs and expenses (including legal fees) arising out of:
+
+Your use of the Platform or breach of these Terms;
+Products or services you offer, including quality, safety, or compliance issues;
+Any injury, illness, or harm caused to Buyers, Delivery Partners, or third parties;
+Violation of applicable laws, regulations, or third-party rights;
+Any misrepresentation or inaccurate information provided by you.
+13. Limitation of Liability
+To the fullest extent permitted by law, Tazty's liability for any claim arising out of or related to these Terms or the Platform shall be limited to the amount of Commission paid by you to Tazty in the three (3) months preceding the claim. Under no circumstances shall Tazty be liable for indirect, incidental, consequential, special or punitive damages, including loss of profits, data, business interruption, or reputation.
+
+Tazty provides the Platform "as is" and does not warrant uninterrupted, error-free, or secure operation. Tazty is not liable for technical failures, internet outages, or third-party service disruptions.
+
+14. Force Majeure
+Neither party will be liable for any failure or delay resulting from events outside its reasonable control, including natural disasters, epidemics, pandemics, war, civil disturbance, government actions, internet or telecom failures, strikes, extreme weather, or acts of God.
+
+15. Dispute Resolution and Governing Law
+These Terms are governed by the laws of India. Parties will attempt to resolve disputes amicably via support channels or designated Partner relations team. If unresolved, disputes will proceed to mediation, followed by binding arbitration under the Arbitration and Conciliation Act, 1996. Jurisdiction for any court proceedings (where arbitration is not applicable) will be the courts of Bangalore, Karnataka.
+
+16. Grievance Redressal
+For grievances under the Information Technology Act and Consumer Protection rules, contact our Grievance Officer:
+
+Name: Tharik Ali R
+
+Email: support@tazty.in or support@valardigital.in
+
+Phone: +91 8073294079
+
+Address: Valar Digital Commerce Pvt. Ltd., Madurai, Tamil Nadu
+
+Response timeline: We will acknowledge receipt within seven (7) business days and resolve substantively within fifteen (15) business days where practicable.
+
+17. Privacy and Data Protection
+Your use of the Platform is subject to our Partner Privacy Policy, which explains how we collect, use, and protect data. As a Partner, you may receive Buyer information necessary for order fulfillment. You must:
+
+Use Buyer information solely for order fulfillment and not for any other purpose;
+Maintain confidentiality and not share Buyer information with third parties without consent;
+Comply with applicable data protection laws including the Information Technology Act and rules thereunder.
+18. Amendments
+Tazty may modify these Terms at any time. Material changes will be notified via the Platform, email, or Partner dashboard with at least thirty (30) days' notice. Continued use of the Platform following notification constitutes acceptance of the amended Terms. If you do not agree to the amendments, you may terminate this Agreement by closing your Partner account.
+
+19. Contact
+For questions about these Terms or Partner support, contact:
+
+Valar Digital Commerce Pvt. Ltd. (Tazty)
+
+Partner Support Email: partners@tazty.in
+
+General Support: support@tazty.in or support@valardigital.in
+
+Legal: legal@tazty.in
+
+Phone: +91 8073294079
+
+Registered Address: No.58/2,1st Floor,vp Road Sankalpa(km Nilayam), Madivala, Bengaluru, Karnataka - 560068
+
+Operational Address: 1st Floor, 23, Kamaraj Nagar, 4th Street, Chinna Chokkikulam, Madurai - 625002, Tamil Nadu - 625002
+
+© 2025 Tazty. All rights reserved. Owned by Valar Digital Commerce Private Limited.

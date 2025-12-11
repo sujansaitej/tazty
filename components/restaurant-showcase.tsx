@@ -48,7 +48,7 @@ export function RestaurantShowcase() {
   ]
 
   return (
-    <section className="py-20 lg:py-32 bg-gray-50">
+    <section id="restaurants" className="py-20 lg:py-32 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <h2 className="mb-4 text-balance text-4xl font-bold lg:text-5xl text-gray-900">

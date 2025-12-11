@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: 'Dinotype';
+  src: url('/fonts/Dinotype-Demo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -119,16 +127,28 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Smooth scroll offset for fixed header */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
   /* Added floating animation for food icons */
   @keyframes float {
+
     0%,
     100% {
       transform: translateY(0px) rotate(0deg);
     }
+
     50% {
       transform: translateY(-20px) rotate(5deg);
     }
@@ -136,5 +156,28 @@
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  /* Fade in animation for sections */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: #00C853;
+    color: white;
   }
 }

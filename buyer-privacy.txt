@@ -1,0 +1,89 @@
+Buyer Privacy Policy
+Last updated: November 5, 2025
+
+This Privacy Policy describes how Tazty ("we", "us", "our") collects, uses, discloses, stores and protects personal information when you use the Tazty Buyer mobile application and related services (the "App" or the "Services"). By using the App or Services you consent to the collection and processing described in this Policy. Please read carefully. Replace placeholders before publishing.
+
+1. Your Consent & Policy Changes
+By using the Services you agree and consent to the collection, transfer, use, storage, disclosure and sharing of your information as described in this Policy. We may update this Policy periodically. When we make material changes we will provide notice in the App or by email. Continued use after notice means you accept the updated Policy.
+
+2. Information We Collect
+2.1 Information You Provide
+Mobile number: Required for login via OTP. We do not store passwords.
+Profile details (optional): Name, email and any other profile fields you choose to provide.
+Addresses: Billing address and shipping/delivery address required to place and fulfil orders.
+Support & feedback: Messages, ratings and reviews you send to us.
+2.2 Information Collected Automatically
+Usage data: App screens viewed, clicks, session duration, crash logs and analytics.
+Location data: Device GPS/location data when you give permission — used for delivery and service availability. We do not track you in the background without explicit consent.
+Cookies & identifiers: Device identifiers, mobile advertising IDs, pixels and similar technologies for analytics and performance.
+2.3 Third-Party Data
+We may receive information about you from payment processors, delivery partners, marketing platforms or from the ONDC network (if applicable). We combine third-party data with data we collect to provide and improve the Services.
+
+3. How We Use Your Information
+We use data for the following purposes:
+
+Purpose	Examples
+Authentication	Login using OTP and account identity verification
+Order processing	Billing, invoicing, assigning delivery partners, fulfilment
+Delivery & location	Service availability, route assignment, estimated time of arrival
+Customer support	Responding to queries, refunds, disputes
+Fraud & security	Detecting abuse, preventing transactions that violate law or policy
+Improvement & analytics	Analytics, product improvements, performance monitoring
+Marketing (only with consent)	Promotional messages, push notifications when you opt-in
+4. Data Storage, Retention & Security
+All personal data is stored on servers located in India. We implement reasonable technical and organizational measures such as encryption in transit (HTTPS), access controls, and role-based access to protect your data. We retain personal information only as long as necessary for the purposes described, and as required by applicable law, after which we anonymise or delete it.
+
+Reality check: While we take security seriously, no system is perfectly secure. We follow industry-standard practices to reduce risk.
+5. Disclosure & Sharing
+We share personal data only with service providers and partners who need the data to perform services on our behalf, and with legal authorities when required. Examples:
+
+Delivery partners: To fulfil orders and coordinate delivery.
+Payment gateways: To process payments (we do not store full card data).
+Analytics & cloud providers: To operate and improve the App.
+Government / law enforcement: When required by law or to investigate fraud.
+We do not sell or rent personal data for marketing without your explicit consent. In the event of a merger or acquisition, personal data may be transferred to the new owner subject to this Policy.
+
+6. Your Rights
+Depending on the applicable law, you may have the right to access, correct, update or request deletion of your personal data, and to withdraw consent where processing is based on consent. To exercise rights, contact us at support@tazty.in. We will respond as required by law.
+
+7. Account Deletion & Data Erasure Procedure
+Important: Account deletion is not instantaneous. To delete your account you must submit a deletion request via our website or by emailing support@tazty.in. The deletion process works as follows:
+
+User submits a deletion request via the external link: User Deletion Request.
+Tazty team reviews the request to confirm identity and to check for outstanding orders, disputes, fraud investigations or legal obligations.
+If eligible, Tazty will delete or anonymise personal data, except for records that must be retained by law (e.g., tax/audit records).
+Tazty reserves the right to accept, delay or deny deletion requests where necessary to comply with legal or business obligations.
+8. Children’s Privacy
+The App is not intended for children under 13. We do not knowingly collect personal data of children under 13. If you believe we have collected such data, contact us immediately at support@tazty.in.
+
+9. Cookies & Tracking Technologies
+We and our service providers use cookies, device identifiers and similar technologies for authentication, analytics and performance. You may control some tracking through device settings, but disabling identifiers may limit App functionality.
+
+10. Links to Other Services
+The App may link to third-party websites and services whose privacy practices we do not control. Review any third-party privacy policies before sharing personal data with them.
+
+11. International Transfers & Affiliates
+Your personal data may be transferred to affiliates or service providers outside India where necessary. We will take steps to ensure appropriate safeguards for international transfers as required by law.
+
+12. Governing Law & Jurisdiction
+This Policy is governed by the laws of India. Disputes will be subject to the courts at the jurisdiction of our registered office: [Bangalore, Karnataka].
+
+13. Contact & Grievance Officer
+If you have questions, requests or grievances related to this Policy, contact us:
+
+Email: support@tazty.in
+Registered Office Address: No.58/2,1st Floor,vp Road Sankalpa(km Nilayam), Madivala, Bengaluru, Karnataka - 560068, India
+Operation Address: 1st Floor, 23, Kamaraj Nagar, 4th Street, Chinna Chokkikulam, Madurai, Tamil Nadu - 625002, India
+Grievance Officer: Tharik Ali R
+
+14. Permissions & App Store / Play Store Disclosures
+Use this summary for App Store privacy label and Google Play Data Safety.
+
+Permission / Data	Purpose	Required?	Stored on Server?	Shared with Third Parties?
+Mobile number (OTP)	Authentication & account identification	Yes	Yes	No (except for SMS/OTP provider)
+Profile info (name, email)	Account profile, support	No (optional)	Yes	Only with service providers as needed
+Billing & Shipping Address	Order fulfilment, invoicing	Yes (for orders)	Yes	Delivery partners, payment processors
+Device location (GPS)	Delivery routing, service availability	Yes (for delivery features)	Yes	Delivery partners, analytics (aggregated)
+Device identifiers, IP	Analytics, fraud detection	No	Yes	Analytics providers
+Payment data (tokenized)	Order payment (handled by gateway)	Yes (to pay)	No (we do not store full card data)	Payment gateway
+© 2025 Tazty. All rights reserved. Owned by Valar Digital Commerce Private Limited.

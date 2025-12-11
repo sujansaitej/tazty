@@ -1,0 +1,162 @@
+Partner Privacy Policy
+Last updated: November 5, 2025
+
+This unified Privacy Policy describes how Valar Digital Commerce Private Limited ("Tazty", "Valar", "we", "us", "our") collects, uses, shares and protects personal data when merchants/sellers ("you", "your") use (a) Tazty Restaurant Partner App (hyperlocal food/business seller app) and (b) Valar Seller App (multi-category merchant panel). This policy applies to seller/merchant users, their authorized staff, and prospective sellers who undergo KYC or onboarding with us, including those connecting via ONDC-compatible NPs.
+
+1. Your Consent & Policy Changes
+By using the Partner Platform you agree to the collection, transfer, use, storage and disclosure of information as described in this Policy. We may update this Policy periodically; material changes will be notified via the Platform or email. Continued use after notification constitutes acceptance of the updated Policy.
+
+2. Scope
+This policy governs personal data processed through the Tazty Restaurant Partner App and Valar Seller App, our merchant back-office portals, and related APIs/SDKs, including integrations with ONDC network participants, logistics partners, and payment service providers.
+
+3. What Data We Collect
+Depending on how you use the apps, we may collect:
+
+3.1 Information You Provide (KYC & Onboarding)
+Identity & KYC: name, business name, date of birth, GSTIN, FSSAI number, PAN, Aadhaar (limited details as permitted), trade certificates/brand documents, Udyam/UDYAM registration, licenses and proofs.
+Contact & Account: phone, email, addresses, profile photos, authorized staff details, store location and working hours.
+Business & Financial: bank account holder name, masked account number/IFSC, UPI VPA, settlement preferences, invoices/credit notes, commission settings, pricing, menu/catalog details.
+Transaction & Order: order IDs, item details, taxes, discounts, settlements, refunds/chargebacks, disputes/issue tickets.
+Logistics & Location: pickup address, geocodes, delivery radius, logistics partner identifiers, live/approximate location if you enable it for store operations (e.g., rider handoff).
+Support & correspondence: messages, complaints, dispute documentation and evidence (photos/videos) you upload, emails, in-app chats, call notes, feedback, survey responses, recordings where legally permitted.
+Marketing Preferences: opt-ins/opt-outs for notifications, SMS/WhatsApp, email campaigns.
+3.2 Information Collected Automatically
+When you use the Partner Platform we automatically collect technical and usage information such as:
+
+Device & Technical: device IDs, OS version, app version, IP address, user agent, crash logs, diagnostics, cookies/SDK events on the web portals.
+Usage metadata: screens visited, features used, timestamps and session duration.
+Location data where you grant permission (for store geolocation and operational purposes).
+3.3 Third-Party Sources
+We may receive information from third parties such as payment processors, verification vendors, background-check providers, or regulatory authorities to verify identity, process payouts, and comply with legal obligations.
+
+4. Why We Use Your Data
+We use collected data for the following purposes:
+
+Onboarding & KYC: to verify identity, validate licences and prevent fraud.
+Order & payment processing: to process orders, initiate settlements and reconcile payouts.
+Operations: enable menu management, availability, order notifications and reporting.
+Support & dispute resolution: investigate complaints, process refunds and resolve disputes.
+Compliance & legal: to meet tax, audit and regulatory obligations.
+Security & fraud prevention: identify abusive behaviour and secure accounts.
+Product improvement: analytics, diagnostics and performance monitoring.
+We do not sell your personal or business data to third parties.
+
+5. Legal Basis & Consent (India)
+We process personal data in accordance with the Digital Personal Data Protection Act, 2023 (DPDP Act) and applicable IT laws/rules. We rely on:
+
+Consent: (e.g., marketing communications, optional device permissions).
+Legitimate use/necessary for the provision of our services: (e.g., order processing, settlements, fraud/security).
+Compliance with law: (e.g., tax, KYC/AML, lawful requests).
+6. Data Sharing & Recipients
+We share information only with parties who need it to provide services or where required by law. Examples include:
+
+Payment & Payout Partners: (e.g., aggregators, banks) — to collect buyer payments and settle merchant payouts.
+Logistics Partners: — to pick up/fulfill orders, including addresses and contact details needed for fulfillment.
+ONDC Participants: — to complete network transactions and dispute/issue workflows (where applicable).
+Verification/KYC Vendors: — to validate GSTIN, FSSAI, PAN, UDYAM, or address/license information.
+Customer Support & Communication Tools: — to handle tickets, calls, chats, SMS/WhatsApp or email notifications.
+Analytics/Crash/Telemetry Providers: — to improve app performance and reliability.
+Cloud/Hosting & Security Providers: — to store/secure data and defend against abuse/fraud.
+Government/Regulators/Legal: — when required by law or to protect rights, users, or our platform.
+All recipients are contractually obliged to maintain confidentiality and use the data only for permitted purposes.
+
+7. ONDC-Specific Disclosures
+For merchants operating via ONDC: certain order and catalog metadata flows to other network participants (Buyer Apps/NPs, Seller NPs, Logistics NPs, Gateways, and Registries) as required by the Beckn protocol and associated ONDC specifications. These include order/cart items, pricing/taxes, fulfillment details, locations/pincodes, and issue/returns data where applicable.
+
+We share only what is reasonably necessary to complete network transactions and comply with settlement/reconciliation norms.
+
+8. Data Storage, Security & Retention
+We may store/process data on servers located inside India. When data is transferred, we use reasonable technical and organizational safeguards and require vendors to protect data appropriately.
+
+We implement reasonable technical and organisational measures such as encryption in transit (HTTPS), access controls, logging, segmentation, and role-based permissions. No system is 100% secure; we monitor for incidents and respond per internal procedures and legal obligations.
+
+Retention Periods: We retain personal data for as long as needed for the purposes above, and as required by law. Illustrative timelines:
+
+KYC/Onboarding records: 8 years from last business activity or as mandated by law
+Order & Settlement data: 8 years from transaction date (or longer if required by tax/finance laws)
+Support/Issue/Dispute records: 5 years after closure
+Device logs/diagnostics: 3–6 months
+Marketing preferences: Until you withdraw consent or delete the account
+When retention is no longer required we will delete or anonymise data.
+
+Reality check: while we follow industry standards for security, no system is 100% secure. You acknowledge this residual risk.
+9. Your Choices & Rights
+You have rights with respect to the personal data we hold about you, subject to legal limitations. These may include the right to:
+
+Access and receive a copy of your personal data.
+Correct inaccurate or incomplete data.
+Request deletion or anonymisation where legally permitted.
+Receive a portable copy of certain data.
+Object to certain processing, including direct marketing.
+To exercise any rights, contact support@tazty.in or support@valardigital.in. We will verify identity before fulfilling requests and respond within statutory timelines.
+
+10. Account Deletion & Data Erasure Procedure
+Important: Account deletion is not instantaneous. Account deletion requests must be submitted to support@tazty.in, support@valardigital.in, or via the Partner Platform. The deletion workflow:
+
+We verify identity and check for outstanding orders, disputes, or legal obligations.
+If eligible, we delete or anonymise personal data except records required for legal/tax retention.
+We may retain limited data for fraud prevention, dispute resolution or as required by law.
+Tazty reserves the right to accept, delay or decline deletion requests where necessary to comply with legal or business obligations.
+
+11. Children's Privacy
+The Partner Platform is not intended for children under 18. We do not knowingly collect personal data of minors. If you believe we have collected such data, contact support@tazty.in or support@valardigital.in immediately.
+
+12. Managing Consent, Permissions & Cookies/SDKs
+You can manage optional app permissions (e.g., location, camera) within your device settings. Web portals may use cookies/SDKs for authentication, analytics, and security; you may control them through browser settings and available opt-outs.
+
+We and our service providers use cookies, device identifiers and similar technologies for authentication, analytics, security and performance. You may control some tracking via device settings; disabling identifiers may reduce functionality.
+
+13. Cross-Border Storage & Transfers
+Your data may be transferred to affiliates or service providers located outside India where necessary. We will implement appropriate safeguards such as contractual protections or other legal mechanisms required by applicable law.
+
+14. Legal Requests & Compliance
+We may disclose personal data in response to lawful requests from public authorities, law enforcement, courts or regulatory agencies, or to prevent imminent harm or fraud. We will comply with applicable legal process and where permitted will notify affected parties unless prohibited by law.
+
+15. Third-Party Links & SDKs
+Our apps may include third-party SDKs or link to external websites not controlled by us. Their privacy practices are governed by their own policies. Please review those policies before use.
+
+16. App-Specific Notes
+Tazty Restaurant Partner App (Hyperlocal Food & Local Business):
+May use approximate or precise location (if enabled) to set delivery radius/store coverage.
+May process FSSAI license details and food-category tax settings.
+Can surface operational alerts via push/SMS/WhatsApp/email with your opt-ins.
+Valar Seller App (Multi-Category Merchants):
+May process category-specific tax/HSN settings and catalog hierarchies.
+May interface with external marketplaces/ONDC network participants for catalog/order sync.
+Supports expanded KYC/brand/trademark document collection where required by category or partner.
+17. Changes to This Policy
+We may update this policy from time to time. If changes are material, we will provide a prominent notice in-app or via email/SMS. Your continued use after the effective date constitutes acceptance of the updated policy.
+
+18. Control Over and Access to Your Personal Information
+Valar understands that you have rights over your personal information, and takes reasonable steps to allow you to access, correct, amend, delete, port, or limit the use of your personal information.
+
+Account Settings: If you are a merchant or a partner, you can update many types of personal information, such as payment or contact information, directly within your account settings.
+
+Contact for Changes: If you are unable to change your personal information within your account settings, or if you are concerned about data collected as you visit Valar's websites or use our support services, please contact us at support@tazty.in or support@valardigital.in to make the required changes.
+
+Data Deletion Impact: It's important to remember that if you delete or limit the use of your personal information, the services may not function properly. Some data cannot be deleted while there are outstanding legal or financial obligations.
+
+Subject to Applicable Law: Subject to applicable law, you may request: access, correction, updating, and deletion of your personal data; withdraw consent where relied upon; and raise grievances.
+
+18. Governing Law & Jurisdiction
+This Policy is governed by the laws of India. Disputes will be subject to the courts at the jurisdiction of our registered office: Bangalore, Karnataka.
+
+19. Contact & Grievance Officer
+If you have privacy questions, data requests or grievances related to this Policy, contact us:
+
+Email: support@tazty.in or support@valardigital.in
+Phone: +91 9952520699
+Grievance Officer: Tharik Ali R
+Registered Office: No.58/2, 1st Floor, VP Road Sankalpa (KM Nilayam), Madivala, Bengaluru, Karnataka - 560068, India
+Operational Office: 1st Floor, 23, Kamaraj Nagar, 4th Street, Chinna Chokkikulam, Madurai, Tamil Nadu - 625002, India
+
+20. Permissions & App Store / Play Store Disclosures
+Use this summary for App Store privacy label and Google Play Data Safety disclosures.
+
+Permission / Data	Purpose	Required?	Stored on Server?	Shared with Third Parties?
+Email address / mobile number login with password. For forgot password we use OTP.	Authentication & account identification	Yes	Yes	SMS/OTP provider (for password reset)
+Business & Owner KYC (PAN, GST, FSSAI)	Onboarding, compliance & verification	Yes	Yes (encrypted)	Verification vendors, regulators
+Bank account & cancelled cheque	Payouts & settlement	Yes	Yes (encrypted)	Payment processors, banks
+Device location (store GPS)	Store geolocation, serviceability	Optional (required for certain features)	Yes	Logistics partners (limited)
+Device identifiers & IP	Analytics, fraud detection	No	Yes	Analytics providers
+© 2025 Tazty. All rights reserved. Owned by Valar Digital Commerce Private Limited.

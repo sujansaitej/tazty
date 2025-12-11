@@ -1,39 +1,36 @@
 import { Button } from "@/components/ui/button"
+import { ShinyButton } from "@/components/ui/shiny-button"
+import GradientText from "@/components/ui/GradientText"
 import { ExternalLink, MapPin, Clock, Navigation, Phone, Mail } from "lucide-react"
+import Aurora from "./Aurora"
 
 export function Hero() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ backgroundColor: "#00C853" }}
+      style={{ backgroundColor: "#023e26" }} // Darker green as requested
     >
+      <div className="absolute inset-0 z-0">
+        <Aurora
+          colorStops={["#023e26", "#00C853", "#00E676"]}
+          blend={0.7}
+          amplitude={1.2}
+          speed={0.3}
+        />
+      </div>
+      {/* ... float items ... */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Keeping existing animated items */}
         <div className="absolute top-20 left-10 text-6xl opacity-20 animate-float">🍕</div>
-        <div className="absolute top-40 right-20 text-5xl opacity-20 animate-float" style={{ animationDelay: "1s" }}>
-          🍔
-        </div>
-        <div className="absolute bottom-32 left-20 text-7xl opacity-20 animate-float" style={{ animationDelay: "2s" }}>
-          🍜
-        </div>
-        <div
-          className="absolute bottom-40 right-16 text-6xl opacity-20 animate-float"
-          style={{ animationDelay: "1.5s" }}
-        >
-          🥗
-        </div>
-        <div className="absolute top-1/3 left-1/4 text-5xl opacity-15 animate-float" style={{ animationDelay: "0.5s" }}>
-          🌮
-        </div>
-        <div
-          className="absolute top-1/2 right-1/3 text-5xl opacity-15 animate-float"
-          style={{ animationDelay: "2.5s" }}
-        >
-          🍱
-        </div>
+        <div className="absolute top-40 right-20 text-5xl opacity-20 animate-float" style={{ animationDelay: "1s" }}>🍔</div>
+        <div className="absolute bottom-32 left-20 text-7xl opacity-20 animate-float" style={{ animationDelay: "2s" }}>🍜</div>
+        <div className="absolute bottom-40 right-16 text-6xl opacity-20 animate-float" style={{ animationDelay: "1.5s" }}>🥗</div>
+        <div className="absolute top-1/3 left-1/4 text-5xl opacity-15 animate-float" style={{ animationDelay: "0.5s" }}>🌮</div>
+        <div className="absolute top-1/2 right-1/3 text-5xl opacity-15 animate-float" style={{ animationDelay: "2.5s" }}>🍱</div>
       </div>
 
       <div className="container relative z-10 mx-auto px-4 py-20 text-center">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
               <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
@@ -49,39 +46,39 @@ export function Hero() {
             </div>
           </div>
 
-          <h1 className="mb-6 text-balance font-bold tracking-tight text-white drop-shadow-lg">
-            <span className="block text-5xl lg:text-7xl mb-2">Hyperlocal</span>
-            <span className="block text-6xl lg:text-8xl" style={{ color: "#00FF6A" }}>
-              Food Delivery
+          <h1
+            className="mb-8 font-extrabold tracking-tight text-white drop-shadow-xl animate-fade-in-up flex flex-col items-center"
+            style={{ fontFamily: "'Supercell Magic', sans-serif" }}
+          >
+            <span className="block text-3xl sm:text-5xl lg:text-6xl mb-2 text-white">
+              Fresh From Your
+            </span>
+
+            <GradientText
+              colors={["#40ffaa", "#00ff2aff", "#40ffaa", "#bfff00ff", "#40ffaa"]}
+              animationSpeed={3}
+              showBorder={false}
+              className="text-5xl sm:text-7xl lg:text-8xl mb-4 leading-[1.1] pb-2"
+            >
+              Neighborhood
+            </GradientText>
+
+            <span className="block text-3xl sm:text-5xl lg:text-6xl text-white">
+              to Your Doorstep.
             </span>
           </h1>
 
-          <p className="mx-auto mb-8 max-w-3xl text-balance text-lg leading-relaxed text-white/95 lg:text-xl font-medium drop-shadow">
+          <p className="mx-auto mb-10 max-w-4xl text-balance text-xl leading-relaxed text-white/95 lg:text-2xl font-medium drop-shadow-md">
             Connecting you with your favorite local restaurants and hidden gems in{" "}
-            <span className="font-bold" style={{ color: "#00FF6A" }}>
+            <span className="font-extrabold text-[#69F0AE]">
               Madurai
             </span>
             . Fresh, fast, and directly from your neighborhood. Built on the{" "}
-            <span className="font-bold" style={{ color: "#00FF6A" }}>
+            <span className="font-extrabold text-[#69F0AE]">
               ONDC network
             </span>{" "}
             for a smooth partner experience.
           </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/20">
-              <span className="text-2xl">🍽️</span>
-              <span className="text-white font-medium text-sm">Local Restaurants</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/20">
-              <Clock className="w-4 h-4 text-white" />
-              <span className="text-white font-medium text-sm">15-min Delivery</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/20">
-              <Navigation className="w-4 h-4 text-white" />
-              <span className="text-white font-medium text-sm">Hyperlocal Focus</span>
-            </div>
-          </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
             <a
@@ -100,56 +97,53 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-            {/* Restaurant Partner Button */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 w-full">
+            {/* 1. Restaurant Partner Button */}
             <a
               href="https://play.google.com/store/apps/details?id=in.tazty.seller"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full sm:w-auto"
+              className="group w-full sm:w-auto order-2 lg:order-1"
             >
               <Button
                 size="lg"
-                className="w-full bg-gray-900/90 text-white hover:bg-gray-900 font-semibold text-base px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20"
+                className="w-full sm:w-auto bg-gray-900/90 text-white hover:bg-gray-900 font-semibold text-base px-6 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20"
               >
-                <span className="mr-2">▶</span>
+                <span className="mr-2"></span>
                 Restaurant Partner
                 <span className="ml-3 text-xs bg-[#00C853] px-2 py-1 rounded-full">Live</span>
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </a>
 
-            {/* Restaurant Partner Web Button */}
+            {/* 2. Order Now Button - Center/Primary */}
+            <div className="order-1 lg:order-2 my-2 lg:my-0">
+              <ShinyButton
+                href="https://play.google.com/store/apps/details?id=in.tazty.buyer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="scale-110 sm:scale-125 mx-4"
+              >
+                <span className="mr-1 text-[8px]"></span>
+                Order Now
+                <span className="ml-2 text-[8px] bg-[#00C853] text-white px-1.5 py-0.5 rounded-full font-bold">Live</span>
+
+              </ShinyButton>
+            </div>
+
+            {/* 3. Restaurant Partner Web Button */}
             <a
               href="https://seller.tazty.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full sm:w-auto"
+              className="group w-full sm:w-auto order-3"
             >
               <Button
                 size="lg"
-                className="w-full bg-gray-900/90 text-white hover:bg-gray-900 font-semibold text-base px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20"
+                className="w-full sm:w-auto bg-gray-900/90 text-white hover:bg-gray-900 font-semibold text-base px-6 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20"
               >
-                <span className="mr-2">🌐</span>
+                <span className="mr-2"></span>
                 Restaurant Partner Web
-                <span className="ml-3 text-xs bg-[#00C853] px-2 py-1 rounded-full">Live</span>
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
-
-            {/* Tazty App Button */}
-            <a
-              href="https://play.google.com/store/apps/details?id=in.tazty.buyer"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group w-full sm:w-auto"
-            >
-              <Button
-                size="lg"
-                className="w-full bg-gray-900/90 text-white hover:bg-gray-900 font-semibold text-base px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20"
-              >
-                <span className="mr-2">▶</span>
-                Tazty App
                 <span className="ml-3 text-xs bg-[#00C853] px-2 py-1 rounded-full">Live</span>
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
