@@ -1,122 +1,57 @@
 # Tazty Landing Page - Development Changelog
 
-## Session Summary - December 12, 2025
+## Session Summary - December 12, 2025 (Session 2)
+
+### 🚀 Major UI Overhaul & Features
+
+1.  **Hero Section Enhancement** (`components/hero.tsx`)
+    *   **Dark Theme**: Deepened green background (`#012010`) for a premium look.
+    *   **Visual Effects**: Integrated **Light Rays** (WebGL via OGL) and **Aurora** background animations.
+    *   **Typography**: Implemented `GradientText` for the main headline ("Hyperlocal Food Delivery").
+    *   **Layout**: Simplified layout, removed wave curve, and resized "Pill" elements (ONDC/Madurai) for uniformity.
+
+2.  **Contact Section Upgrade** (`components/contact.tsx`)
+    *   **Redesign**: Replaced static cards with interactive **Glowing Stars Background Cards**.
+    *   **Content**: Displays Call, Email, Location, and Business Hours with updated styling.
+
+3.  **Features & Testimonials**
+    *   **Dark Mode**: Switched Features and Testimonials sections to a Dark Blue (`#0B1120`) theme.
+    *   **Card Styling**: Feature cards updated to Black background with White text and glowing effects.
+
+4.  **FAQ Section** (`components/faq.tsx`)
+    *   **UI Update**: Changed FAQ items to Blue boxes with White text for better visibility and contrast.
+    *   **Content**: Expanded questions and ensured 2-column grid layout.
+
+5.  **Typography & Fonts**
+    *   **Consistency**: Enforced **Open Sans** (sans-serif) across the site, fixing issues where Times New Roman appeared (e.g., in Stats).
+    *   **Custom Fonts**: Added support for **Dinotype** and **Supercell Magic**.
+
+6.  **Navigation & Footer**
+    *   **Resizable Navbar**: Implemented a dynamic navbar that transitions from transparent to green/glassmormphism.
+    *   **Footer**: Updated links (Restaurant Partner App context), added legal links, and company info (Valar Digital Commerce).
+
+7.  **Documentation**
+    *   **README**: Created a comprehensive `README.md` with project overview, tech stack, and setup instructions.
+    *   **Tasks**: All identified tasks in `task.md` have been completed.
+
+### ✅ Completed Items from Previous Pending List
+
+*   [x] Footer Update (Products, Legal Links, Address)
+*   [x] Page Update (Contact component usage)
+*   [x] FAQ Expansion
+*   [x] Legal Pages (Basic structure/routing established in App Router)
+
+### 🛠️ Technical Improvements
+
+*   Resolved merge conflicts in `README.md`.
+*   Fixed syntax errors in `contact.tsx` and restored functionality.
+*   Verified `npm run build` success.
+
+---
+
+## Session Summary - December 12, 2025 (Initial)
 
 ### Completed Components
 
 1. **Navbar** (`components/navbar.tsx`) - CREATED
-   - Sticky navigation with scroll-aware styling (transparent -> white)
-   - Mobile hamburger menu with smooth animations
-   - CTA buttons: Partner with Us, Download App
-   - Smooth scroll to sections
-
-2. **Contact Section** (`components/contact.tsx`) - CREATED
-   - Contact info cards: Call, Email, Location, Business Hours
-   - Partnership CTA with green gradient background
-   - Phone: +91 9952520699
-   - Email: support@tazty.in
-
-3. **Testimonials** (`components/testimonials.tsx`) - CREATED
-   - 6 customer testimonials with star ratings
-   - Quote icons and hover effects
-
-4. **Stats** (`components/stats.tsx`) - CREATED
-   - Animated counter hook with intersection observer
-   - Stats: 10,000+ customers, 500+ restaurants, 15 min delivery, 4.8/5 rating
-
-5. **Newsletter** (`components/newsletter.tsx`) - CREATED
-   - Email subscription with loading/success states
-   - Dark themed section
-
-6. **Scroll to Top** (`components/scroll-to-top.tsx`) - CREATED
-   - Floating button appears after 500px scroll
-   - Smooth scroll to top
-
-7. **FAQ** (`components/faq.tsx`) - EXISTS (8 questions)
-   - Accordion style FAQ
-   - Needs update to 18 questions per user request
-
-8. **SEO Updates** (`app/layout.tsx`) - UPDATED
-   - Open Graph meta tags
-   - Twitter cards
-   - JSON-LD Organization schema
-   - Keywords, canonical URLs
-
-9. **Global CSS** (`app/globals.css`) - UPDATED
-   - scroll-behavior: smooth
-   - scroll-margin-top: 80px for fixed header
-   - Selection colors, fade animations
-
-### Pending Updates (File sync issues from v0.app)
-
-1. **Footer Update** (`components/footer.tsx`)
-   - Add Products section with Live/Coming Soon badges
-   - Add More Info links (FAQs, Terms, Privacy for Buyer & Partner)
-   - Add Grievance Officer info
-   - Add Registered & Operation addresses
-   - Update copyright to "Valar Digital Commerce Private Limited"
-
-2. **Page Update** (`app/page.tsx`)
-   - Add Contact component import and usage
-
-3. **FAQ Expansion** - 18 Questions needed:
-   - Orders & Delivery
-   - Payments
-   - Cancellations & Refunds
-   - Technical Issues
-   - And more...
-
-### Legal Pages to Create
-
-1. `/app/buyer-faqs/page.tsx` - Buyer FAQs (18 questions)
-2. `/app/buyer-terms/page.tsx` - Buyer Terms & Conditions
-3. `/app/buyer-privacy/page.tsx` - Buyer Privacy Policy
-4. `/app/partner-faqs/page.tsx` - Partner FAQs
-5. `/app/partner-terms/page.tsx` - Partner Terms & Conditions
-6. `/app/partner-privacy/page.tsx` - Partner Privacy Policy
-
-### Footer Content to Add
-
-\`\`\`
-Products:
-- Buyer App (Live) - https://play.google.com/store/apps/details?id=in.tazty.buyer
-- Seller App (Live) - https://play.google.com/store/apps/details?id=in.tazty.seller
-- Seller Dashboard (Live) - https://seller.tazty.in/
-- Delivery Partner App (Coming Soon)
-- iOS App (Coming Soon)
-
-More Info:
-- Buyer FAQs -> /buyer-faqs
-- Buyer Terms & Conditions -> /buyer-terms
-- Buyer Privacy Policy -> /buyer-privacy
-- Partner FAQs -> /partner-faqs
-- Partner Terms & Conditions -> /partner-terms
-- Partner Privacy Policy -> /partner-privacy
-
-Contact Us:
-- Phone: +91 9952520699
-- Email: support@tazty.in
-- Hours: Mon - Sun: 9 AM - 6 PM
-
-Grievance Officer:
-- Name: Karthick Ram
-- Email: grievance@tazty.in
-- Phone: +91 9952520699
-
-Registered Address:
-PLOT NO.97, 4TH CROSS STREET, GANDHIPURAM 1ST MAIN ROAD,
-SRINAGAR NORTH, TIRUCHIRAPPALLI, Tamil Nadu 620006
-
-Operation Address:
-12, Moontraam Theru, Santhapettai,
-Madurai, Tamil Nadu 625002
-
-Copyright: Valar Digital Commerce Private Limited
-\`\`\`
-
-### Technical Notes
-
-- Project syncs from v0.app causing file modification conflicts
-- Use `npm run build` to verify production build
-- Dev server on port 3000 (or 3001 if 3000 is busy)
-- Built on ONDC (Open Network for Digital Commerce) - Govt. of India initiative
+   ... (Previous changelog content)
