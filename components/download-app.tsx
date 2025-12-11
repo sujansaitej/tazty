@@ -4,15 +4,15 @@ import Image from "next/image"
 
 export function DownloadApp() {
   return (
-    <section id="download" className="py-20 lg:py-32 bg-gradient-to-br from-[#00C853] to-[#00A843] relative overflow-hidden">
+    <section id="download" className="py-12 lg:py-20 bg-gradient-to-br from-[#00C853] to-[#00A843] relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-white blur-3xl" />
         <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-white blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="w-full px-6 lg:px-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left content */}
           <div className="text-white">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
@@ -76,8 +76,8 @@ export function DownloadApp() {
 
           {/* Right image */}
           <div className="relative lg:block hidden">
-            <div className="relative w-full h-[600px]">
-              <Image src="/tazty-app-mockup.jpg" alt="Tazty App" fill className="object-contain drop-shadow-2xl" />
+            <div className="relative w-full h-[400px]">
+              <Image src="/app-screen-home.png" alt="Tazty App" fill className="object-contain drop-shadow-2xl" />
             </div>
           </div>
         </div>

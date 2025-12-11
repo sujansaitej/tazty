@@ -46,15 +46,25 @@ export function Footer() {
             <h4 className="mb-6 font-bold text-gray-900">Products & Company</h4>
             <ul className="space-y-3 text-sm text-gray-600">
               <li className="flex items-center justify-between">
-                <span>Tazty Buyer App</span>
+                <a href="https://play.google.com/store/apps/details?id=in.tazty.sbuyer" target="_blank" rel="noopener noreferrer" className="hover:text-[#00C853] transition-colors">
+                  Restaurant Partner App
+                </a>
                 <span className="text-[10px] bg-[#00C853] text-white px-1.5 py-0.5 rounded">Live</span>
               </li>
               <li className="flex items-center justify-between">
-                <span>Restaurant Partner App</span>
+                <a href="https://seller.tazty.in/" target="_blank" rel="noopener noreferrer" className="hover:text-[#00C853] transition-colors">
+                  Restaurant Partner Web
+                </a>
                 <span className="text-[10px] bg-[#00C853] text-white px-1.5 py-0.5 rounded">Live</span>
               </li>
               <li className="flex items-center justify-between">
-                <span>Valar Seller App</span>
+                <a href="https://play.google.com/store/apps/details?id=in.tazty.seller" target="_blank" rel="noopener noreferrer" className="hover:text-[#00C853] transition-colors">
+                  Tazty App
+                </a>
+                <span className="text-[10px] bg-[#00C853] text-white px-1.5 py-0.5 rounded">Live</span>
+              </li>
+              <li className="flex items-center justify-between">
+                <span>Tazty Delivery Partner App</span>
                 <span className="text-[10px] bg-yellow-500 text-white px-1.5 py-0.5 rounded">Coming Soon</span>
               </li>
               <li>

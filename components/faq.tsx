@@ -7,7 +7,7 @@ import Link from 'next/link'
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
-  // Top 8 questions for the home page (curated from the full list)
+  // Curated list for home page
   const faqs = [
     {
       question: "What is Tazty?",
@@ -15,15 +15,23 @@ export function FAQ() {
     },
     {
       question: "How do I place an order?",
-      answer: "Open the app → choose a restaurant → browse the menu and add items to cart → choose payment method and confirm order. You will receive real-time updates until delivery."
+      answer: "Open the app → choose a restaurant → browse the menu → add items to cart → choose payment method → confirm order. You will receive real-time updates until delivery."
+    },
+    {
+      question: "Why was my order not accepted?",
+      answer: "Possible reasons: Item unavailable, high order volume, restaurant temporarily closed, operational issues, or delivery location out of range. If payment was taken, you will receive a full automatic refund."
+    },
+    {
+      question: "Can I cancel my order?",
+      answer: "The in-app cancellation feature will be available soon. For now, please contact Tazty support if you want to cancel an order."
     },
     {
       question: "How long does delivery take?",
       answer: "Delivery time depends on restaurant prep time, distance, traffic, weather, and delivery partner availability. You can track your order live in the app."
     },
     {
-      question: "Why was my order not accepted?",
-      answer: "Possible reasons include item unavailability, high order volume, restaurant temporarily closed, operational issues, or delivery location out of range. If payment was taken, you will receive a full automatic refund."
+      question: "How do I track my order?",
+      answer: "The app shows restaurant acceptance, preparation progress, delivery partner assignment, and live location (when available)."
     },
     {
       question: "What payment methods are supported?",
@@ -36,6 +44,14 @@ export function FAQ() {
     {
       question: "Wrong, missing, or damaged items?",
       answer: "Please call or email customer care within 2 hours of receiving your order with photos or videos showing the issue. Support will review and assist with refunds or resolutions."
+    },
+    {
+      question: "Order marked delivered but not received?",
+      answer: "This may happen due to incorrect address or delivery left with security/neighbor. Report immediately to Tazty support for investigation."
+    },
+    {
+      question: "Are there delivery charges or extra fees?",
+      answer: "Charges may include delivery charges, packaging charges, platform service fees, and GST. No surge fees are applied."
     },
     {
       question: "How do I contact Tazty support?",
@@ -58,13 +74,13 @@ export function FAQ() {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto mb-12">
+        <div className="max-w-6xl mx-auto mb-12 grid md:grid-cols-2 gap-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`mb-4 rounded-2xl border transition-all duration-300 ${openIndex === index
-                  ? "border-[#00C853]/30 bg-white shadow-lg"
-                  : "border-gray-200 bg-gray-50 hover:bg-white hover:shadow-md"
+              className={`rounded-2xl border transition-all duration-300 h-fit ${openIndex === index
+                ? "border-[#00C853]/30 bg-white shadow-lg"
+                : "border-gray-200 bg-gray-50 hover:bg-white hover:shadow-md"
                 }`}
             >
               <button
@@ -89,7 +105,7 @@ export function FAQ() {
                 className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
               >
-                <p className="px-6 pb-5 text-gray-600 leading-relaxed pl-20">{faq.answer}</p>
+                <p className="px-6 pb-5 text-gray-600 leading-relaxed pl-20 text-sm">{faq.answer}</p>
               </div>
             </div>
           ))}
