@@ -102,4 +102,20 @@ This project is proprietary software of Tazty. All rights reserved.
 
 ---
 
-Built with ❤️ for Madurai.
+Built with ❤️ for Valar Madurai by **Sujan Saitej**.
+
+<br>
+
+*Automatically synced with your [v0.app](https://v0.app) deployments*
+
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/sujansaitejs-projects/v0-landing-page-design)
+
+## Deployment
+
+Your project is live at:
+**[https://vercel.com/sujansaitejs-projects/v0-landing-page-design](https://vercel.com/sujansaitejs-projects/v0-landing-page-design)**
+
+## Build your app
+
+Continue building your app on:
+**[https://v0.app/chat/nRrX7ykJP1Y](https://v0.app/chat/nRrX7ykJP1Y)**
