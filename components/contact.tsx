@@ -3,6 +3,7 @@
 import { Phone, Mail, MapPin, Clock, Building2, Handshake } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Boxes } from "@/components/ui/background-boxes"
+import { GlowingStarsBackgroundCard, GlowingStarsDescription, GlowingStarsTitle } from "@/components/ui/glowing-background-stars-card"
 
 export function Contact() {
   const contactInfo = [
@@ -56,22 +57,30 @@ export function Contact() {
           {contactInfo.map((item, index) => {
             const Icon = item.icon
             const CardContent = (
-              <div className="group p-8 rounded-3xl bg-white border border-gray-100 hover:border-[#00C853]/30 hover:shadow-xl transition-all duration-300 h-full text-center">
-                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#00C853]/10 text-[#00C853] transition-all duration-300 group-hover:bg-[#00C853] group-hover:text-white group-hover:scale-110">
-                  <Icon className="h-8 w-8" strokeWidth={2} />
+              <GlowingStarsBackgroundCard className="h-full min-h-[220px]">
+                <GlowingStarsTitle className="text-xl">{item.title}</GlowingStarsTitle>
+                <div className="flex justify-between items-end mt-4">
+                  <div className="flex flex-col gap-2">
+                    <GlowingStarsDescription className="text-sm text-gray-300">
+                      {item.subtitle}
+                    </GlowingStarsDescription>
+                    <p className="font-bold text-[#00C853] text-sm md:text-base">
+                      {item.value}
+                    </p>
+                  </div>
+                  <div className="h-10 w-10 flex-shrink-0 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
+                    <Icon className="h-5 w-5 text-white" strokeWidth={1.5} />
+                  </div>
                 </div>
-                <h3 className="mb-2 text-xl font-bold text-gray-900">{item.title}</h3>
-                <p className="text-sm text-gray-500 mb-3">{item.subtitle}</p>
-                <p className="font-semibold text-[#00C853]">{item.value}</p>
-              </div>
+              </GlowingStarsBackgroundCard>
             )
 
             return item.href ? (
-              <a key={index} href={item.href} className="block">
+              <a key={index} href={item.href} className="block h-full group">
                 {CardContent}
               </a>
             ) : (
-              <div key={index}>{CardContent}</div>
+              <div key={index} className="h-full">{CardContent}</div>
             )
           })}
         </div>
