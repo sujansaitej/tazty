@@ -42,35 +42,35 @@ Follow these steps to set up the project locally.
 ### Installation
 
 1. **Clone the repository:**
-   ```bash
+   \`\`\`bash
    git clone https://github.com/sujansaitej/tazty.git
    cd tazty
-   ```
+   \`\`\`
 
 2. **Install dependencies:**
-   ```bash
+   \`\`\`bash
    npm install
-   ```
+   \`\`\`
 
 3. **Run the development server:**
-   ```bash
+   \`\`\`bash
    npm run dev
-   ```
+   \`\`\`
    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### Build for Production
 
 To create an optimized production build:
 
-```bash
+\`\`\`bash
 npm run build
-```
+\`\`\`
 
 The output will be generated in the `.next` folder.
 
 ## 📂 Project Structure
 
-```
+\`\`\`
 tazty/
 ├── app/                  # Next.js App Router pages and layout
 │   ├── globals.css       # Global styles and Tailwind imports
@@ -89,7 +89,7 @@ tazty/
 ├── package.json          # Project dependencies and scripts
 ├── tailwind.config.ts    # Tailwind CSS configuration (if present)
 └── tsconfig.json         # TypeScript configuration
-```
+\`\`\`
 
 ## 🎨 Customizations
 
