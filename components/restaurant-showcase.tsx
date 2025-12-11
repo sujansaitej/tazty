@@ -95,15 +95,7 @@ export function RestaurantShowcase() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <Button
-            size="lg"
-            variant="outline"
-            className="rounded-full px-8 py-6 text-lg font-semibold border-2 border-[#00C853] text-[#00C853] hover:bg-[#00C853] hover:text-white bg-transparent"
-          >
-            View All Restaurants
-          </Button>
-        </div>
+
       </div>
     </section>
   )

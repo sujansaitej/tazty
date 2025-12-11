@@ -25,7 +25,7 @@ export function Newsletter() {
   }
 
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-16 bg-gray-900 flex flex-col justify-center h-full">
       <div className="w-full px-6 lg:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#00C853]/20 mb-6">

@@ -3,19 +3,35 @@ import { ShinyButton } from "@/components/ui/shiny-button"
 import GradientText from "@/components/ui/GradientText"
 import { ExternalLink, MapPin, Clock, Navigation, Phone, Mail } from "lucide-react"
 import Aurora from "./Aurora"
+import LightRays from "@/components/ui/light-rays"
 
 export function Hero() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ backgroundColor: "#023e26" }} // Darker green as requested
+      style={{ backgroundColor: "#012010" }} // Darker green as requested (was #023e26)
     >
       <div className="absolute inset-0 z-0">
         <Aurora
-          colorStops={["#023e26", "#00C853", "#00E676"]}
+          colorStops={["#012010", "#00C853", "#00E676"]}
           blend={0.7}
           amplitude={1.2}
           speed={0.3}
+        />
+      </div>
+
+      <div className="absolute inset-0 z-0 select-nonepointer-events-none">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#00ffff"
+          raysSpeed={1.5}
+          lightSpread={0.8}
+          rayLength={1.2}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="custom-rays opacity-50"
         />
       </div>
       {/* ... float items ... */}
@@ -32,17 +48,14 @@ export function Hero() {
       <div className="container relative z-10 mx-auto px-4 py-20 text-center">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
-              <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
-                <span className="text-[#00C853] font-bold text-xs">ONDC</span>
-              </div>
-              <span className="text-white font-medium text-sm">Powered by Govt. of India ONDC Network</span>
+            <div className="flex items-center gap-2 bg-white px-4 h-10 rounded-full shadow-md">
+              <span className="text-[#023e26] font-medium text-xs sm:text-sm">Powered by Govt. of India ONDC Network</span>
             </div>
 
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-3 rounded-full border border-white/20">
-              <MapPin className="w-4 h-4 text-white" />
-              <span className="text-white font-medium text-sm">Launching in Madurai</span>
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
+            <div className="flex items-center gap-2 bg-white px-4 h-10 rounded-full shadow-md">
+              <MapPin className="w-3.5 h-3.5 text-[#023e26]" />
+              <span className="text-[#023e26] font-medium text-xs sm:text-sm">Launching in Madurai</span>
+              <span className="w-2 h-2 bg-[#00C853] rounded-full animate-pulse" />
             </div>
           </div>
 
@@ -51,20 +64,20 @@ export function Hero() {
             style={{ fontFamily: "'Supercell Magic', sans-serif" }}
           >
             <span className="block text-3xl sm:text-5xl lg:text-6xl mb-2 text-white">
-              Fresh From Your
+              Madurai's Own & First
             </span>
 
             <GradientText
               colors={["#40ffaa", "#00ff2aff", "#40ffaa", "#bfff00ff", "#40ffaa"]}
               animationSpeed={3}
               showBorder={false}
-              className="text-5xl sm:text-7xl lg:text-8xl mb-4 leading-[1.1] pb-2"
+              className="text-5xl sm:text-7xl lg:text-10xl mb-4 leading-[1.1] pb-2"
             >
-              Neighborhood
+              Hyperlocal Food Delivery
             </GradientText>
 
-            <span className="block text-3xl sm:text-5xl lg:text-6xl text-white">
-              to Your Doorstep.
+            <span className="text-balance text-4xl font-bold tracking-tight text-white lg:text-5xl">
+              to Your Doorstep
             </span>
           </h1>
 
@@ -152,15 +165,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Wave divider at bottom */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-          <path
-            d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z"
-            fill="white"
-          />
-        </svg>
-      </div>
+      {/* Divider removed as requested: straight bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-10" />
     </section>
   )
 }

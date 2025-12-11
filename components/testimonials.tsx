@@ -55,16 +55,16 @@ export function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="py-20 lg:py-32 bg-white">
+    <section id="testimonials" className="py-20 lg:py-32 bg-[#0B1120]">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="inline-block px-4 py-2 rounded-full bg-[#00C853]/10 text-[#00C853] font-semibold text-sm mb-4">
             Customer Love
           </span>
-          <h2 className="mb-4 text-balance text-4xl font-bold lg:text-5xl text-gray-900">
+          <h2 className="mb-4 text-balance text-4xl font-bold lg:text-5xl text-white">
             What Our <span className="text-[#00C853]">Customers</span> Say
           </h2>
-          <p className="text-balance text-lg text-gray-600">
+          <p className="text-balance text-lg text-gray-300">
             Join thousands of happy customers who trust Tazty for their daily food cravings in Madurai.
           </p>
         </div>

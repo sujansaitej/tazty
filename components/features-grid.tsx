@@ -5,16 +5,16 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export function FeaturesGrid() {
     return (
-        <section className="py-20 lg:py-24 bg-white relative overflow-hidden">
+        <section className="py-20 lg:py-24 bg-[#0B1120] relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="mx-auto max-w-2xl text-center mb-16">
                     <span className="inline-block px-4 py-2 rounded-full bg-[#00C853]/10 text-[#00C853] font-semibold text-sm mb-4">
                         Why Choose Tazty?
                     </span>
-                    <h2 className="text-balance text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl">
+                    <h2 className="text-balance text-4xl font-bold tracking-tight text-white lg:text-5xl">
                         Celebrating <span className="text-[#00C853]">Madurai's</span> Focus
                     </h2>
-                    <p className="mt-4 text-lg text-gray-600">
+                    <p className="mt-4 text-lg text-gray-300">
                         We're building more than just a food delivery app - we're creating a platform that celebrates and supports Madurai's rich food culture.
                     </p>
                 </div>
@@ -75,7 +75,7 @@ interface GridItemProps {
 const GridItem = ({ area, icon, title, description }: GridItemProps) => {
     return (
         <li className={`min-h-[14rem] list-none ${area}`}>
-            <div className="relative h-full rounded-2xl border border-gray-100 p-2 md:rounded-3xl md:p-3 bg-gray-50/50">
+            <div className="relative h-full rounded-2xl border border-white/10 p-2 md:rounded-3xl md:p-3 bg-white/5">
                 <GlowingEffect
                     spread={40}
                     glow={true}
@@ -84,16 +84,16 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
                     inactiveZone={0.01}
                     variant="green"
                 />
-                <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl bg-white p-6 md:p-6 shadow-sm ring-1 ring-gray-100 transition-shadow hover:shadow-md">
+                <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl bg-black p-6 md:p-6 shadow-sm ring-1 ring-white/10 transition-shadow hover:shadow-md">
                     <div className="relative flex flex-1 flex-col justify-between gap-3">
                         <div className="w-fit rounded-xl bg-[#00C853]/10 p-3 ring-1 ring-[#00C853]/20">
                             {icon}
                         </div>
-                        <div className="space-y-3">
-                            <h3 className="pt-0.5 font-sans text-xl font-bold text-gray-900 md:text-2xl">
+                        <div className="space-y-3" style={{ fontFamily: "var(--font-open-sans), system-ui, sans-serif" }}>
+                            <h3 className="pt-0.5 text-xl font-bold text-white md:text-2xl">
                                 {title}
                             </h3>
-                            <p className="font-sans text-sm text-gray-500 md:text-base">
+                            <p className="text-sm text-gray-400 md:text-base">
                                 {description}
                             </p>
                         </div>

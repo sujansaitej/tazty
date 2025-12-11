@@ -79,8 +79,8 @@ export function FAQ() {
             <div
               key={index}
               className={`rounded-2xl border transition-all duration-300 h-fit ${openIndex === index
-                ? "border-[#00C853]/30 bg-white shadow-lg"
-                : "border-gray-200 bg-gray-50 hover:bg-white hover:shadow-md"
+                ? "border-[#00C853] bg-[#0B1120] shadow-lg"
+                : "border-gray-800 bg-[#0B1120] hover:border-gray-700"
                 }`}
             >
               <button
@@ -94,10 +94,10 @@ export function FAQ() {
                   >
                     <HelpCircle className="w-5 h-5" />
                   </div>
-                  <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
+                  <span className="font-semibold text-white pr-4">{faq.question}</span>
                 </div>
                 <ChevronDown
-                  className={`w-5 h-5 text-gray-500 transition-transform duration-300 flex-shrink-0 ${openIndex === index ? "rotate-180" : ""
+                  className={`w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 ${openIndex === index ? "rotate-180 text-white" : ""
                     }`}
                 />
               </button>
@@ -105,7 +105,7 @@ export function FAQ() {
                 className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
               >
-                <p className="px-6 pb-5 text-gray-600 leading-relaxed pl-20 text-sm">{faq.answer}</p>
+                <p className="px-6 pb-5 text-gray-300 leading-relaxed pl-20 text-sm">{faq.answer}</p>
               </div>
             </div>
           ))}

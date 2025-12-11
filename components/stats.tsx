@@ -63,8 +63,8 @@ export function Stats() {
     },
     {
       icon: Star,
-      value: 4.8,
-      suffix: "/5",
+      value: 5,
+      suffix: " Stars",
       label: "App Rating",
       description: "Based on user reviews",
       isDecimal: true,
@@ -72,7 +72,7 @@ export function Stats() {
   ]
 
   return (
-    <section ref={ref} className="py-16 bg-[#00C853]">
+    <section ref={ref} className="py-16 bg-[#00C853]" style={{ fontFamily: "var(--font-open-sans), 'Open Sans', sans-serif" }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {stats.map((stat, index) => {
