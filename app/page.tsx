@@ -4,7 +4,6 @@ import { Stats } from "@/components/stats"
 import { FeaturesGrid } from "@/components/features-grid"
 import ScrollVelocity from "@/components/ui/ScrollVelocity"
 import { HowItWorks } from "@/components/how-it-works"
-
 import { Testimonials } from "@/components/testimonials"
 import { FAQ } from "@/components/faq"
 import { Contact } from "@/components/contact"

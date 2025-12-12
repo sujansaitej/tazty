@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from "next"
 import { Inter, Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
+import { PageTransition } from "@/components/page-transition"
+import { SmoothScrollProvider } from "@/components/smooth-scroll-provider"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -134,7 +136,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={`${inter.className} ${openSans.variable} font-sans antialiased`} suppressHydrationWarning>
         <Script
           id="structured-data"
@@ -144,7 +146,11 @@ export default function RootLayout({
             __html: JSON.stringify(structuredData),
           }}
         />
-        {children}
+        <SmoothScrollProvider>
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </SmoothScrollProvider>
         <Analytics />
       </body>
     </html>

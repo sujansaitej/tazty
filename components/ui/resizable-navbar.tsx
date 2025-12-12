@@ -9,7 +9,7 @@ import {
 } from "motion/react";
 import Image from "next/image";
 
-import React, { useRef, useState, useMemo } from "react";
+import React, { useRef, useState, useMemo, useEffect } from "react";
 
 
 interface NavbarProps {
@@ -172,6 +172,20 @@ const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsP
                             if (isHashLink && currentPathname !== "/") {
                                 e.preventDefault();
                                 window.location.href = `/${item.link}`;
+                            } else if (isHashLink && currentPathname === "/") {
+                                // Smooth scroll to section on same page
+                                e.preventDefault();
+                                const target = document.querySelector(item.link);
+                                if (target) {
+                                    const elementPosition = target.getBoundingClientRect().top;
+                                    const offsetPosition = elementPosition + window.pageYOffset - 80;
+                                    window.scrollTo({
+                                        top: offsetPosition,
+                                        behavior: 'smooth'
+                                    });
+                                    // Update URL
+                                    window.history.pushState(null, '', item.link);
+                                }
                             }
                             onItemClick?.();
                         }}
