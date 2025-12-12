@@ -7,8 +7,9 @@ import {
     useScroll,
     useMotionValueEvent,
 } from "motion/react";
+import Image from "next/image";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useMemo } from "react";
 
 
 interface NavbarProps {
@@ -29,6 +30,7 @@ interface NavItemsProps {
     }[];
     className?: string;
     onItemClick?: () => void;
+    visible?: boolean;
 }
 
 interface MobileNavProps {
@@ -100,7 +102,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
                 damping: 50,
             }}
             style={{
-                minWidth: "800px",
+                minWidth: "min(800px, 100%)",
                 WebkitBackdropFilter: visible ? "blur(10px)" : "none", // Edge/WebKit prefix
             } as React.CSSProperties}
             className={cn(
@@ -121,44 +123,58 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
     );
 };
 
-export const NavItems = ({ items, className, onItemClick, visible }: NavItemsProps & { visible?: boolean }) => {
+const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsProps) => {
     const [hovered, setHovered] = useState<number | null>(null);
+
+    // Get current pathname for active link detection
+    const currentPath = typeof window !== "undefined" ? window.location.hash || window.location.pathname : "";
 
     return (
         <motion.div
             onMouseLeave={() => setHovered(null)}
+            role="navigation"
+            aria-label="Main navigation"
             className={cn(
                 "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
                 visible ? "text-gray-900 hover:text-gray-700" : "text-white hover:text-gray-200",
                 className,
             )}
         >
-            {items.map((item, idx) => (
-                <a
-                    onMouseEnter={() => setHovered(idx)}
-                    onClick={onItemClick}
-                    className={cn(
-                        "relative px-4 py-2",
-                        visible ? "text-gray-900" : "text-white"
-                    )}
-                    key={`link-${idx}`}
-                    href={item.link}
-                >
-                    {hovered === idx && (
-                        <motion.div
-                            layoutId="hovered"
-                            className={cn(
-                                "absolute inset-0 h-full w-full rounded-full",
-                                visible ? "bg-gray-900/10" : "bg-white/10"
-                            )}
-                        />
-                    )}
-                    <span className="relative z-20">{item.name}</span>
-                </a>
-            ))}
+            {items.map((item, idx) => {
+                const isActive = currentPath === item.link || (item.link === "#" && currentPath === "/");
+                return (
+                    <a
+                        onMouseEnter={() => setHovered(idx)}
+                        onClick={onItemClick}
+                        className={cn(
+                            "relative px-4 py-2 focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full",
+                            visible ? "text-gray-900 focus:ring-gray-900" : "text-white focus:ring-white"
+                        )}
+                        key={`link-${idx}`}
+                        href={item.link}
+                        aria-label={`Navigate to ${item.name}`}
+                        aria-current={isActive ? "page" : undefined}
+                    >
+                        {hovered === idx && (
+                            <motion.div
+                                layoutId="hovered"
+                                className={cn(
+                                    "absolute inset-0 h-full w-full rounded-full",
+                                    visible ? "bg-gray-900/10" : "bg-white/10"
+                                )}
+                            />
+                        )}
+                        <span className="relative z-20">{item.name}</span>
+                    </a>
+                );
+            })}
         </motion.div>
     );
 };
+
+NavItemsComponent.displayName = "NavItems";
+
+export const NavItems = React.memo(NavItemsComponent);
 
 export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
     return (
@@ -234,9 +250,12 @@ export const MobileNavMenu = ({
         <AnimatePresence>
             {isOpen && (
                 <motion.div
+                    id="mobile-nav-menu"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
+                    role="menu"
+                    aria-label="Mobile navigation menu"
                     className={cn(
                         "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950",
                         className,
@@ -256,26 +275,43 @@ export const MobileNavToggle = ({
     isOpen: boolean;
     onClick: () => void;
 }) => {
-    return isOpen ? (
-        <IconX className="text-black dark:text-white" onClick={onClick} />
-    ) : (
-        <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
+    return (
+        <button
+            type="button"
+            onClick={onClick}
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav-menu"
+            className="text-black dark:text-white p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 dark:focus:ring-white rounded-md transition-colors"
+        >
+            {isOpen ? (
+                <IconX className="w-6 h-6" aria-hidden="true" />
+            ) : (
+                <IconMenu2 className="w-6 h-6" aria-hidden="true" />
+            )}
+        </button>
     );
 };
 
 export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
+    const logoSrc = useMemo(() => (visible ? "/logo.png" : "/logo-1.png"), [visible]);
+
     return (
         <a
             href="/"
+            aria-label="Tazty Home"
             className={cn(
-                "relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal",
-                visible ? "text-gray-900" : "text-white"
+                "relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md",
+                visible ? "text-gray-900 focus:ring-gray-900" : "text-white focus:ring-white"
             )}
         >
-            <img 
-                src={visible ? "/logo.png" : "/logo-1.png"} 
+            <Image 
+                src={logoSrc}
                 alt="Tazty Logo" 
-                className="w-10 h-4 rounded-full object-cover" 
+                width={40}
+                height={16}
+                className="rounded-full object-cover"
+                priority
             />
         </a>
     );

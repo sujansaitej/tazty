@@ -5,7 +5,7 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export function FeaturesGrid() {
     return (
-        <section className="py-20 lg:py-24 bg-[#0B1120] relative overflow-hidden">
+        <section id="features" className="py-20 lg:py-24 bg-[#0B1120] relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="mx-auto max-w-2xl text-center mb-16">
                     <span className="inline-block px-4 py-2 rounded-full bg-[#00C853]/10 text-[#00C853] font-semibold text-sm mb-4">

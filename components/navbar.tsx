@@ -18,7 +18,7 @@ export function Navbar() {
     { name: "Home", link: "#" },
     { name: "Features", link: "#features" },
     { name: "How It Works", link: "#how-it-works" },
-    { name: "Restaurants", link: "#restaurants" },
+    // { name: "Restaurants", link: "#restaurants" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
