@@ -72,9 +72,9 @@ export function Stats() {
   ]
 
   return (
-    <section ref={ref} className="py-16 bg-[#00C853]" style={{ fontFamily: "var(--font-open-sans), 'Open Sans', sans-serif" }}>
+    <section ref={ref} className="py-12 sm:py-16 bg-[#00C853]" style={{ fontFamily: "var(--font-open-sans), 'Open Sans', sans-serif" }}>
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             const count = useCountUp(

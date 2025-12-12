@@ -20,7 +20,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="absolute inset-0 z-0 select-nonepointer-events-none">
+      <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <LightRays
           raysOrigin="top-center"
           raysColor="#00ffff"
@@ -110,37 +110,37 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 w-full">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8 w-full max-w-5xl mx-auto">
             {/* 1. Restaurant Partner Button */}
             <a
               href="https://play.google.com/store/apps/details?id=in.tazty.seller"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full sm:w-auto order-2 lg:order-1"
+              className="group w-full sm:w-auto order-2 lg:order-1 flex-shrink-0"
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-gray-900/90 text-white hover:bg-gray-900 font-semibold text-base px-6 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20"
+                className="w-full sm:w-auto bg-gray-900/90 text-white hover:bg-gray-900 font-semibold text-sm sm:text-base px-4 sm:px-6 py-5 sm:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20"
               >
                 <span className="mr-2"></span>
-                Restaurant Partner
-                <span className="ml-3 text-xs bg-[#00C853] px-2 py-1 rounded-full">Live</span>
+                <span className="hidden sm:inline">Restaurant Partner</span>
+                <span className="sm:hidden">Partner App</span>
+                <span className="ml-2 sm:ml-3 text-xs bg-[#00C853] px-2 py-1 rounded-full">Live</span>
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </a>
 
             {/* 2. Order Now Button - Center/Primary */}
-            <div className="order-1 lg:order-2 my-2 lg:my-0">
+            <div className="order-1 lg:order-2 my-2 lg:my-0 flex-shrink-0">
               <ShinyButton
                 href="https://play.google.com/store/apps/details?id=in.tazty.buyer"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="scale-110 sm:scale-125 mx-4"
+                className="scale-100 sm:scale-110 lg:scale-125"
               >
                 <span className="mr-1 text-[8px]"></span>
                 Order Now
                 <span className="ml-2 text-[8px] bg-[#00C853] text-white px-1.5 py-0.5 rounded-full font-bold">Live</span>
-
               </ShinyButton>
             </div>
 
@@ -149,15 +149,16 @@ export function Hero() {
               href="https://seller.tazty.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full sm:w-auto order-3"
+              className="group w-full sm:w-auto order-3 flex-shrink-0"
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-gray-900/90 text-white hover:bg-gray-900 font-semibold text-base px-6 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20"
+                className="w-full sm:w-auto bg-gray-900/90 text-white hover:bg-gray-900 font-semibold text-sm sm:text-base px-4 sm:px-6 py-5 sm:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20"
               >
                 <span className="mr-2"></span>
-                Restaurant Partner Web
-                <span className="ml-3 text-xs bg-[#00C853] px-2 py-1 rounded-full">Live</span>
+                <span className="hidden sm:inline">Restaurant Partner Web</span>
+                <span className="sm:hidden">Partner Web</span>
+                <span className="ml-2 sm:ml-3 text-xs bg-[#00C853] px-2 py-1 rounded-full">Live</span>
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Button>
             </a>

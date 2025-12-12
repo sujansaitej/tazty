@@ -97,40 +97,42 @@ export function Contact() {
             </div>
 
             {/* Content with Overlay for visibility */}
-            <div className="relative z-20 flex flex-col lg:flex-row items-center gap-8 w-full">
+            <div className="relative z-20 flex flex-col lg:flex-row items-center gap-6 lg:gap-8 w-full">
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center backdrop-blur-sm border border-white/30">
-                  <Handshake className="w-10 h-10 text-white" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/20 flex items-center justify-center backdrop-blur-sm border border-white/30">
+                  <Handshake className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
               </div>
 
               <div className="flex-1 text-center lg:text-left">
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-3">
                   Ready to Partner with Us?
                 </h3>
-                <p className="text-green-50 text-lg max-w-xl">
+                <p className="text-green-50 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
                   Are you a restaurant owner in Madurai? Join our platform and reach more customers with our hyperlocal delivery service.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a href="tel:+919952520699">
+              <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                <a href="tel:+919952520699" className="w-full sm:w-auto">
                   <Button
                     size="lg"
-                    className="bg-white text-[#00C853] hover:bg-white/90 rounded-full px-6 py-6 font-semibold shadow-lg shadow-black/5"
+                    className="w-full sm:w-auto bg-white text-[#00C853] hover:bg-white/90 rounded-full px-4 sm:px-6 py-5 sm:py-6 font-semibold shadow-lg shadow-black/5 text-sm sm:text-base"
                   >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call for Partnership
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                    <span className="hidden sm:inline">Call for Partnership</span>
+                    <span className="sm:hidden">Call Us</span>
                   </Button>
                 </a>
-                <a href="mailto:partnerships@tazty.in">
+                <a href="mailto:partnerships@tazty.in" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     variant="outline"
-                    className="bg-transparent text-white border-white/40 hover:bg-white/10 rounded-full px-6 py-6 font-semibold backdrop-blur-sm"
+                    className="w-full sm:w-auto bg-transparent text-white border-white/40 hover:bg-white/10 rounded-full px-4 sm:px-6 py-5 sm:py-6 font-semibold backdrop-blur-sm text-sm sm:text-base"
                   >
-                    <Mail className="w-5 h-5 mr-2" />
-                    Email Partnerships
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                    <span className="hidden sm:inline">Email Partnerships</span>
+                    <span className="sm:hidden">Email Us</span>
                   </Button>
                 </a>
               </div>

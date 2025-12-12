@@ -11,8 +11,8 @@ export function DownloadApp() {
         <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-white blur-3xl" />
       </div>
 
-      <div className="w-full px-6 lg:px-12 relative z-10 flex flex-col justify-center h-full">
-        <div className="flex flex-col items-center text-center max-w-lg mx-auto lg:mr-48 xl:mr-64">
+      <div className="w-full px-4 sm:px-6 lg:px-12 relative z-10 flex flex-col justify-center h-full">
+        <div className="flex flex-col items-center text-center max-w-lg mx-auto lg:mr-48 xl:mr-64 relative">
           {/* Left content (Text) */}
           <div className="text-white">
             <div className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
@@ -76,8 +76,8 @@ export function DownloadApp() {
         </div>
 
         {/* Floating Image at the Edge */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 hidden lg:block z-50 pointer-events-none">
-          <div className="relative w-[180px] h-[360px] drop-shadow-2xl">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[20%] lg:translate-x-1/2 hidden lg:block z-50 pointer-events-none overflow-hidden">
+          <div className="relative w-[150px] lg:w-[180px] h-[300px] lg:h-[360px] drop-shadow-2xl">
             <Image src="/app-screen-home.png" alt="Tazty App" fill className="object-contain" />
           </div>
         </div>

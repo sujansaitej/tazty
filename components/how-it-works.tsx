@@ -63,7 +63,7 @@ export function HowItWorks() {
 
               {/* Connecting line (hidden on last item and mobile) */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-[#00C853] to-[#00C853]/20" />
+                <div className="hidden lg:block absolute top-16 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-gradient-to-r from-[#00C853] to-[#00C853]/20" />
               )}
             </div>
           ))}

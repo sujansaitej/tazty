@@ -87,14 +87,14 @@ export function FAQ() {
                 className="w-full px-6 py-5 flex items-center justify-between text-left"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 sm:gap-4">
                   <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors flex-shrink-0 ${openIndex === index ? "bg-[#00C853] text-white" : "bg-[#00C853]/10 text-[#00C853]"
+                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-colors flex-shrink-0 ${openIndex === index ? "bg-[#00C853] text-white" : "bg-[#00C853]/10 text-[#00C853]"
                       }`}
                   >
-                    <HelpCircle className="w-5 h-5" />
+                    <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <span className="font-semibold text-white pr-4">{faq.question}</span>
+                  <span className="font-semibold text-white pr-4 text-sm sm:text-base">{faq.question}</span>
                 </div>
                 <ChevronDown
                   className={`w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 ${openIndex === index ? "rotate-180 text-white" : ""
@@ -105,7 +105,7 @@ export function FAQ() {
                 className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
               >
-                <p className="px-6 pb-5 text-gray-300 leading-relaxed pl-20 text-sm">{faq.answer}</p>
+                <p className="px-6 pb-5 text-gray-300 leading-relaxed pl-4 sm:pl-20 text-sm sm:text-base">{faq.answer}</p>
               </div>
             </div>
           ))}

@@ -69,11 +69,11 @@ export function Testimonials() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-[#00C853]/30 hover:shadow-xl transition-all duration-300"
+              className="group relative p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-[#00C853]/30 hover:shadow-xl transition-all duration-300"
             >
               <Quote className="absolute top-6 right-6 w-10 h-10 text-[#00C853]/10 group-hover:text-[#00C853]/20 transition-colors" />
 
