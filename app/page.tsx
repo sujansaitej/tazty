@@ -4,7 +4,7 @@ import { Stats } from "@/components/stats"
 import { FeaturesGrid } from "@/components/features-grid"
 import ScrollVelocity from "@/components/ui/ScrollVelocity"
 import { HowItWorks } from "@/components/how-it-works"
-import { RestaurantShowcase } from "@/components/restaurant-showcase"
+
 import { Testimonials } from "@/components/testimonials"
 import { FAQ } from "@/components/faq"
 import { Contact } from "@/components/contact"
@@ -29,7 +29,7 @@ export default function Home() {
       <Stats />
       <FeaturesGrid />
       <HowItWorks />
-      <RestaurantShowcase />
+
       <Testimonials />
       <FAQ />
       <Contact />
