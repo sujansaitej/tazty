@@ -111,14 +111,25 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
                 className,
             )}
         >
-            {React.Children.map(children, (child) =>
-                React.isValidElement(child)
-                    ? React.cloneElement(
+            {React.Children.map(children, (child) => {
+                if (!React.isValidElement(child)) {
+                    return child;
+                }
+                
+                // Only pass visible prop to components that accept it
+                // Check if it's a custom component (not a native HTML element)
+                const isCustomComponent = typeof child.type === 'function' || typeof child.type === 'object';
+                
+                if (isCustomComponent) {
+                    return React.cloneElement(
                         child as React.ReactElement<{ visible?: boolean }>,
                         { visible },
-                    )
-                    : child,
-            )}
+                    );
+                }
+                
+                // For native HTML elements (div, span, etc.), don't pass visible prop
+                return child;
+            })}
         </motion.div>
     );
 };
@@ -141,11 +152,29 @@ const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsP
             )}
         >
             {items.map((item, idx) => {
-                const isActive = currentPath === item.link || (item.link === "#" && currentPath === "/");
+                // Handle active state: check if link matches current path or if it's home link and we're on root
+                const isHomeLink = item.link === "/";
+                const isHashLink = item.link.startsWith("#");
+                const currentPathname = typeof window !== "undefined" ? window.location.pathname : "";
+                const currentHash = typeof window !== "undefined" ? window.location.hash : "";
+                
+                const isActive = isHomeLink 
+                    ? currentPathname === "/" && !currentHash
+                    : isHashLink
+                    ? currentHash === item.link || (currentPathname === "/" && currentHash === item.link)
+                    : currentPathname === item.link;
+                
                 return (
                     <a
                         onMouseEnter={() => setHovered(idx)}
-                        onClick={onItemClick}
+                        onClick={(e) => {
+                            // If it's a hash link and we're not on home page, navigate to home first
+                            if (isHashLink && currentPathname !== "/") {
+                                e.preventDefault();
+                                window.location.href = `/${item.link}`;
+                            }
+                            onItemClick?.();
+                        }}
                         className={cn(
                             "relative px-4 py-2 focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full",
                             visible ? "text-gray-900 focus:ring-gray-900" : "text-white focus:ring-white"
@@ -204,14 +233,23 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
                 className,
             )}
         >
-            {React.Children.map(children, (child) =>
-                React.isValidElement(child)
-                    ? React.cloneElement(
+            {React.Children.map(children, (child) => {
+                if (!React.isValidElement(child)) {
+                    return child;
+                }
+                
+                // Only pass visible prop to components that accept it
+                const isCustomComponent = typeof child.type === 'function' || typeof child.type === 'object';
+                
+                if (isCustomComponent) {
+                    return React.cloneElement(
                         child as React.ReactElement<{ visible?: boolean }>,
                         { visible },
-                    )
-                    : child,
-            )}
+                    );
+                }
+                
+                return child;
+            })}
         </motion.div>
     );
 };
@@ -228,14 +266,23 @@ export const MobileNavHeader = ({
                 className,
             )}
         >
-            {React.Children.map(children, (child) =>
-                React.isValidElement(child)
-                    ? React.cloneElement(
+            {React.Children.map(children, (child) => {
+                if (!React.isValidElement(child)) {
+                    return child;
+                }
+                
+                // Only pass visible prop to components that accept it
+                const isCustomComponent = typeof child.type === 'function' || typeof child.type === 'object';
+                
+                if (isCustomComponent) {
+                    return React.cloneElement(
                         child as React.ReactElement<{ visible?: boolean }>,
                         { visible },
-                    )
-                    : child,
-            )}
+                    );
+                }
+                
+                return child;
+            })}
         </div>
     );
 };

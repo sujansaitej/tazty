@@ -15,7 +15,7 @@ import { Download, Store } from "lucide-react";
 
 export function Navbar() {
   const navItems = [
-    { name: "Home", link: "#" },
+    { name: "Home", link: "/" },
     { name: "Features", link: "#features" },
     { name: "How It Works", link: "#how-it-works" },
     // { name: "Restaurants", link: "#restaurants" },
@@ -68,16 +68,28 @@ export function Navbar() {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
-            {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300 font-medium py-2"
-              >
-                <span className="block">{item.name}</span>
-              </a>
-            ))}
+            {navItems.map((item, idx) => {
+              const isHashLink = item.link.startsWith("#");
+              const currentPathname = typeof window !== "undefined" ? window.location.pathname : "";
+              
+              return (
+                <a
+                  key={`mobile-link-${idx}`}
+                  href={item.link}
+                  onClick={(e) => {
+                    // If it's a hash link and we're not on home page, navigate to home first
+                    if (isHashLink && currentPathname !== "/") {
+                      e.preventDefault();
+                      window.location.href = `/${item.link}`;
+                    }
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="relative text-neutral-600 dark:text-neutral-300 font-medium py-2"
+                >
+                  <span className="block">{item.name}</span>
+                </a>
+              );
+            })}
             <div className="flex w-full flex-col gap-4 mt-4">
               <NavbarButton
                 as="a"
