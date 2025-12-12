@@ -101,26 +101,35 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
             }}
             style={{
                 minWidth: "800px",
-            }}
+                WebkitBackdropFilter: visible ? "blur(10px)" : "none", // Edge/WebKit prefix
+            } as React.CSSProperties}
             className={cn(
                 "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-                visible && "bg-[#00C853] text-white shadow-lg",
+                visible && "bg-white text-gray-900 shadow-lg",
                 className,
             )}
         >
-            {children}
+            {React.Children.map(children, (child) =>
+                React.isValidElement(child)
+                    ? React.cloneElement(
+                        child as React.ReactElement<{ visible?: boolean }>,
+                        { visible },
+                    )
+                    : child,
+            )}
         </motion.div>
     );
 };
 
-export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
+export const NavItems = ({ items, className, onItemClick, visible }: NavItemsProps & { visible?: boolean }) => {
     const [hovered, setHovered] = useState<number | null>(null);
 
     return (
         <motion.div
             onMouseLeave={() => setHovered(null)}
             className={cn(
-                "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-white transition duration-200 hover:text-gray-200 lg:flex lg:space-x-2",
+                "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
+                visible ? "text-gray-900 hover:text-gray-700" : "text-white hover:text-gray-200",
                 className,
             )}
         >
@@ -128,14 +137,20 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                 <a
                     onMouseEnter={() => setHovered(idx)}
                     onClick={onItemClick}
-                    className="relative px-4 py-2 text-white"
+                    className={cn(
+                        "relative px-4 py-2",
+                        visible ? "text-gray-900" : "text-white"
+                    )}
                     key={`link-${idx}`}
                     href={item.link}
                 >
                     {hovered === idx && (
                         <motion.div
                             layoutId="hovered"
-                            className="absolute inset-0 h-full w-full rounded-full bg-white/10"
+                            className={cn(
+                                "absolute inset-0 h-full w-full rounded-full",
+                                visible ? "bg-gray-900/10" : "bg-white/10"
+                            )}
                         />
                     )}
                     <span className="relative z-20">{item.name}</span>
@@ -164,13 +179,23 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
                 stiffness: 200,
                 damping: 50,
             }}
+            style={{
+                WebkitBackdropFilter: visible ? "blur(10px)" : "none", // Edge/WebKit prefix
+            } as React.CSSProperties}
             className={cn(
                 "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
                 visible && "bg-white/80 dark:bg-neutral-950/80",
                 className,
             )}
         >
-            {children}
+            {React.Children.map(children, (child) =>
+                React.isValidElement(child)
+                    ? React.cloneElement(
+                        child as React.ReactElement<{ visible?: boolean }>,
+                        { visible },
+                    )
+                    : child,
+            )}
         </motion.div>
     );
 };
@@ -178,7 +203,8 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
 export const MobileNavHeader = ({
     children,
     className,
-}: MobileNavHeaderProps) => {
+    visible,
+}: MobileNavHeaderProps & { visible?: boolean }) => {
     return (
         <div
             className={cn(
@@ -186,7 +212,14 @@ export const MobileNavHeader = ({
                 className,
             )}
         >
-            {children}
+            {React.Children.map(children, (child) =>
+                React.isValidElement(child)
+                    ? React.cloneElement(
+                        child as React.ReactElement<{ visible?: boolean }>,
+                        { visible },
+                    )
+                    : child,
+            )}
         </div>
     );
 };
@@ -230,14 +263,20 @@ export const MobileNavToggle = ({
     );
 };
 
-export const NavbarLogo = () => {
+export const NavbarLogo = ({ visible }: { visible?: boolean }) => {
     return (
         <a
             href="/"
-            className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-white"
+            className={cn(
+                "relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal",
+                visible ? "text-gray-900" : "text-white"
+            )}
         >
-            <img src="/logo-1.png" alt="Tazty Logo" className="w-10 h-4 rounded-full object-cover" />
-            
+            <img 
+                src={visible ? "/logo.png" : "/logo-1.png"} 
+                alt="Tazty Logo" 
+                className="w-10 h-4 rounded-full object-cover" 
+            />
         </a>
     );
 };

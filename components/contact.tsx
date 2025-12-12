@@ -89,7 +89,10 @@ export function Contact() {
         <div className="w-full">
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#00C853] to-[#018c3a] p-8 lg:p-12 lg:px-24 min-h-[250px] flex items-center justify-center">
             {/* Background Animation */}
-            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none [mask-image:radial-gradient(transparent,white)]">
+            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none" style={{
+              WebkitMaskImage: 'radial-gradient(transparent, white)',
+              maskImage: 'radial-gradient(transparent, white)'
+            } as React.CSSProperties}>
               <Boxes />
             </div>
 
