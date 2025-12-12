@@ -16,7 +16,10 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h3 className="mb-4 text-3xl font-bold text-[#00C853]">Tazty</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <img src="/logo.png" alt="Tazty Logo" className="w-10 h-10 rounded-full object-cover" />
+              <h3 className="text-3xl font-bold text-[#00C853]">Tazty</h3>
+            </div>
             <p className="text-sm leading-relaxed text-gray-600 mb-4 max-w-sm">
               Hyperlocal food delivery connecting you with your favorite local restaurants in Madurai. Fresh, fast, and directly from your neighborhood.
             </p>

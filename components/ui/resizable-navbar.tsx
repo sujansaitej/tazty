@@ -236,10 +236,8 @@ export const NavbarLogo = () => {
             href="/"
             className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-white"
         >
-            <div className="w-8 h-8 rounded-full bg-[#00C853] flex items-center justify-center border border-white">
-                <span className="text-white font-bold text-xs">T</span>
-            </div>
-            <span className="font-medium text-white text-lg">Tazty</span>
+            <img src="/logo.png" alt="Tazty Logo" className="w-10 h-4 rounded-full object-cover" />
+            
         </a>
     );
 };
