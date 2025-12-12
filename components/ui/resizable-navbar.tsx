@@ -236,7 +236,7 @@ export const NavbarLogo = () => {
             href="/"
             className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-white"
         >
-            <img src="/logo.png" alt="Tazty Logo" className="w-10 h-4 rounded-full object-cover" />
+            <img src="/logo-1.png" alt="Tazty Logo" className="w-10 h-4 rounded-full object-cover" />
             
         </a>
     );

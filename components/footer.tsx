@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export function Footer() {
   const socialLinks = [
-    { icon: Instagram, href: "https://instagram.com/tazty.in", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/tazty.app", label: "Instagram" },
     { icon: Twitter, href: "https://twitter.com/tazty_in", label: "Twitter" },
     { icon: Facebook, href: "https://facebook.com/tazty.in", label: "Facebook" },
     { icon: Linkedin, href: "https://linkedin.com/company/tazty", label: "LinkedIn" },

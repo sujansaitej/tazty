@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -80,12 +81,24 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicons/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicons/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicons/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicons/favicon-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/favicons/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/favicons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "icon", url: "/favicons/favicon-192.png", sizes: "192x192", type: "image/png" },
+      { rel: "icon", url: "/favicons/favicon-512.png", sizes: "512x512", type: "image/png" },
+    ],
   },
   manifest: "/manifest.json",
   category: "food",
-  generator: 'v0.app'
+  generator: 'v0.app',
 }
 
 export default function RootLayout({
@@ -93,44 +106,44 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Tazty",
+    url: "https://tazty.in",
+    logo: "https://tazty.in/icon.svg",
+    description: "Hyperlocal food delivery connecting you with your favorite local restaurants in Madurai.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Madurai",
+      addressRegion: "Tamil Nadu",
+      addressCountry: "IN",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-9952520699",
+      contactType: "customer service",
+      email: "support@tazty.in",
+    },
+    sameAs: [
+      "https://instagram.com/tazty.in",
+      "https://twitter.com/tazty_in",
+      "https://facebook.com/tazty.in",
+      "https://linkedin.com/company/tazty",
+    ],
+  }
+
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <script
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.className} ${openSans.variable} font-sans antialiased`} suppressHydrationWarning>
+        <Script
+          id="structured-data"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Tazty",
-              url: "https://tazty.in",
-              logo: "https://tazty.in/icon.svg",
-              description: "Hyperlocal food delivery connecting you with your favorite local restaurants in Madurai.",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Madurai",
-                addressRegion: "Tamil Nadu",
-                addressCountry: "IN",
-              },
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+91-9952520699",
-                contactType: "customer service",
-                email: "support@tazty.in",
-              },
-              sameAs: [
-                "https://instagram.com/tazty.in",
-                "https://twitter.com/tazty_in",
-                "https://facebook.com/tazty.in",
-                "https://linkedin.com/company/tazty",
-              ],
-            }),
+            __html: JSON.stringify(structuredData),
           }}
         />
-      </head>
-      <body className={`${inter.className} ${openSans.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
