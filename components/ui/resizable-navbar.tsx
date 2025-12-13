@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 
 import React, { useRef, useState, useMemo, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 
 interface NavbarProps {
@@ -136,9 +137,22 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 
 const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsProps) => {
     const [hovered, setHovered] = useState<number | null>(null);
+    const [currentHash, setCurrentHash] = useState<string>("");
+    const [isMounted, setIsMounted] = useState(false);
+    const pathname = usePathname();
 
-    // Get current pathname for active link detection
-    const currentPath = typeof window !== "undefined" ? window.location.hash || window.location.pathname : "";
+    // Update hash on client side only (after hydration)
+    useEffect(() => {
+        setIsMounted(true);
+        setCurrentHash(window.location.hash);
+        
+        const handleHashChange = () => {
+            setCurrentHash(window.location.hash);
+        };
+        
+        window.addEventListener("hashchange", handleHashChange);
+        return () => window.removeEventListener("hashchange", handleHashChange);
+    }, []);
 
     return (
         <motion.div
@@ -155,24 +169,25 @@ const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsP
                 // Handle active state: check if link matches current path or if it's home link and we're on root
                 const isHomeLink = item.link === "/";
                 const isHashLink = item.link.startsWith("#");
-                const currentPathname = typeof window !== "undefined" ? window.location.pathname : "";
-                const currentHash = typeof window !== "undefined" ? window.location.hash : "";
                 
+                // Calculate active state
+                // For home link and regular links, we can check on server (pathname works on both)
+                // For hash links, we need to wait for hydration to avoid mismatch
                 const isActive = isHomeLink 
-                    ? currentPathname === "/" && !currentHash
+                    ? pathname === "/" && (!isMounted || !currentHash)
                     : isHashLink
-                    ? currentHash === item.link || (currentPathname === "/" && currentHash === item.link)
-                    : currentPathname === item.link;
+                    ? isMounted && (currentHash === item.link || (pathname === "/" && currentHash === item.link))
+                    : pathname === item.link;
                 
                 return (
                     <a
                         onMouseEnter={() => setHovered(idx)}
                         onClick={(e) => {
                             // If it's a hash link and we're not on home page, navigate to home first
-                            if (isHashLink && currentPathname !== "/") {
+                            if (isHashLink && pathname !== "/") {
                                 e.preventDefault();
                                 window.location.href = `/${item.link}`;
-                            } else if (isHashLink && currentPathname === "/") {
+                            } else if (isHashLink && pathname === "/") {
                                 // Smooth scroll to section on same page
                                 e.preventDefault();
                                 const target = document.querySelector(item.link);
@@ -183,8 +198,9 @@ const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsP
                                         top: offsetPosition,
                                         behavior: 'smooth'
                                     });
-                                    // Update URL
+                                    // Update URL and hash state
                                     window.history.pushState(null, '', item.link);
+                                    setCurrentHash(item.link);
                                 }
                             }
                             onItemClick?.();
@@ -197,6 +213,7 @@ const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsP
                         href={item.link}
                         aria-label={`Navigate to ${item.name}`}
                         aria-current={isActive ? "page" : undefined}
+                        suppressHydrationWarning
                     >
                         {hovered === idx && (
                             <motion.div

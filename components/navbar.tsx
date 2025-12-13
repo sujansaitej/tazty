@@ -11,6 +11,7 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Download, Store } from "lucide-react";
 
 export function Navbar() {
@@ -22,6 +23,7 @@ export function Navbar() {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className="relative w-full">
@@ -70,7 +72,6 @@ export function Navbar() {
           >
             {navItems.map((item, idx) => {
               const isHashLink = item.link.startsWith("#");
-              const currentPathname = typeof window !== "undefined" ? window.location.pathname : "";
               
               return (
                 <a
@@ -78,13 +79,14 @@ export function Navbar() {
                   href={item.link}
                   onClick={(e) => {
                     // If it's a hash link and we're not on home page, navigate to home first
-                    if (isHashLink && currentPathname !== "/") {
+                    if (isHashLink && pathname !== "/") {
                       e.preventDefault();
                       window.location.href = `/${item.link}`;
                     }
                     setIsMobileMenuOpen(false);
                   }}
                   className="relative text-neutral-600 dark:text-neutral-300 font-medium py-2"
+                  suppressHydrationWarning
                 >
                   <span className="block">{item.name}</span>
                 </a>
