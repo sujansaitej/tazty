@@ -116,7 +116,6 @@ export function Footer() {
             <div className="mt-6">
               <h5 className="font-bold text-gray-900 text-xs mb-2">Grievance Officer</h5>
               <p className="text-xs text-gray-600">Tharik Ali R</p>
-              <p className="text-xs text-gray-600">Phone: +91 8073294079</p>
               <a href="mailto:support@tazty.in" className="text-xs text-[#00C853] hover:underline">support@tazty.in</a>
             </div>
           </div>
