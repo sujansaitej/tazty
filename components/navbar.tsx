@@ -27,12 +27,12 @@ export function Navbar() {
 
   return (
     <div className="relative w-full">
-      <ResizableNavbar className="fixed top-4">
+      <ResizableNavbar>
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4 z-50">
+          <div className="flex items-center gap-4 relative z-20 flex-shrink-0 ml-auto">
             <NavbarButton
               as="a"
               href="https://seller.tazty.in/"
@@ -78,14 +78,33 @@ export function Navbar() {
                   key={`mobile-link-${idx}`}
                   href={item.link}
                   onClick={(e) => {
+                    e.preventDefault();
+                    
                     // If it's a hash link and we're not on home page, navigate to home first
                     if (isHashLink && pathname !== "/") {
-                      e.preventDefault();
                       window.location.href = `/${item.link}`;
+                    } else if (isHashLink && pathname === "/") {
+                      // Smooth scroll to section on same page
+                      const target = document.querySelector(item.link);
+                      if (target) {
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - 80;
+                        window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                        });
+                        // Update URL
+                        window.history.pushState(null, '', item.link);
+                      }
+                    } else if (!isHashLink) {
+                      // Regular page navigation
+                      window.location.href = item.link;
                     }
+                    
                     setIsMobileMenuOpen(false);
                   }}
                   className="relative text-neutral-600 dark:text-neutral-300 font-medium py-2"
+                  data-no-smooth-scroll="true"
                   suppressHydrationWarning
                 >
                   <span className="block">{item.name}</span>

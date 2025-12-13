@@ -196,6 +196,9 @@
 
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   html {
@@ -266,21 +269,52 @@
     }
   }
 
-  /* Added floating animation for food icons */
-  @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0px) rotate(0deg);
+  /* Simplified scroll animation for better performance */
+  @keyframes scroll-simple {
+    0% {
+      transform: translateX(0);
     }
-
-    50% {
-      transform: translateY(-20px) rotate(5deg);
+    100% {
+      transform: translateX(-50%);
     }
   }
 
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+  .animate-scroll-simple {
+    animation: scroll-simple 40s linear infinite; /* Slower for better performance */
+    will-change: transform;
+  }
+
+  /* Simple floating animation for food icons - lightweight and smooth */
+  @keyframes float-simple {
+    0%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -15px, 0);
+    }
+  }
+
+  .animate-float-simple {
+    animation: float-simple 8s ease-in-out infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    
+    .animate-scroll-simple,
+    .animate-float-simple {
+      animation: none !important;
+    }
   }
 
   /* Fade in animation for sections */

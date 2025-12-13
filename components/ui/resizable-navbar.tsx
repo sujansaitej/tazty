@@ -60,11 +60,24 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     });
     const [visible, setVisible] = useState<boolean>(false);
 
+    // Optimized scroll handling - batch updates with RAF for smooth 60fps
+    const rafIdRef = useRef<number | null>(null);
+    const lastScrollValue = useRef<number>(0);
+    const pendingUpdate = useRef<boolean>(false);
+    
     useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest > 100) {
-            setVisible(true);
-        } else {
-            setVisible(false);
+        lastScrollValue.current = latest;
+        pendingUpdate.current = true;
+        
+        if (rafIdRef.current === null) {
+            rafIdRef.current = requestAnimationFrame(() => {
+                rafIdRef.current = null;
+                if (pendingUpdate.current) {
+                    pendingUpdate.current = false;
+                    const scrollValue = lastScrollValue.current;
+                    setVisible(scrollValue > 100);
+                }
+            });
         }
     });
 
@@ -72,7 +85,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
         <motion.div
             ref={ref}
             // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-            className={cn("sticky inset-x-0 top-20 z-40 w-full", className)}
+            className={cn("fixed inset-x-0 top-4 z-50 w-full", className)}
         >
             {React.Children.map(children, (child) =>
                 React.isValidElement(child)
@@ -90,25 +103,26 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
     return (
         <motion.div
             animate={{
-                backdropFilter: visible ? "blur(10px)" : "none",
-                boxShadow: visible
-                    ? "0 0 24px rgba(255, 255, 255, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
-                    : "none",
-                width: visible ? "60%" : "100%",
+                scale: visible ? 0.98 : 1,
                 y: visible ? 20 : 0,
             }}
             transition={{
                 type: "spring",
-                stiffness: 200,
-                damping: 50,
+                stiffness: 400,
+                damping: 35,
+                mass: 0.3,
             }}
             style={{
                 minWidth: "min(800px, 100%)",
-                WebkitBackdropFilter: visible ? "blur(10px)" : "none", // Edge/WebKit prefix
+                width: visible ? "60%" : "100%",
+                willChange: "transform",
+                transform: "translateZ(0)", // Force GPU acceleration
             } as React.CSSProperties}
             className={cn(
-                "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-                visible && "bg-white text-gray-900 shadow-lg",
+                "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent transition-all duration-300 ease-out",
+                visible 
+                    ? "bg-white text-gray-900 shadow-lg backdrop-blur-md" 
+                    : "bg-transparent",
                 className,
             )}
         >
@@ -160,10 +174,11 @@ const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsP
             role="navigation"
             aria-label="Main navigation"
             className={cn(
-                "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
+                "absolute left-0 right-0 top-0 bottom-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
                 visible ? "text-gray-900 hover:text-gray-700" : "text-white hover:text-gray-200",
                 className,
             )}
+            style={{ pointerEvents: 'none' } as React.CSSProperties}
         >
             {items.map((item, idx) => {
                 // Handle active state: check if link matches current path or if it's home link and we're on root
@@ -183,13 +198,16 @@ const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsP
                     <a
                         onMouseEnter={() => setHovered(idx)}
                         onClick={(e) => {
+                            e.preventDefault();
+                            
                             // If it's a hash link and we're not on home page, navigate to home first
                             if (isHashLink && pathname !== "/") {
-                                e.preventDefault();
                                 window.location.href = `/${item.link}`;
-                            } else if (isHashLink && pathname === "/") {
+                                return;
+                            }
+                            
+                            if (isHashLink && pathname === "/") {
                                 // Smooth scroll to section on same page
-                                e.preventDefault();
                                 const target = document.querySelector(item.link);
                                 if (target) {
                                     const elementPosition = target.getBoundingClientRect().top;
@@ -202,17 +220,23 @@ const NavItemsComponent = ({ items, className, onItemClick, visible }: NavItemsP
                                     window.history.pushState(null, '', item.link);
                                     setCurrentHash(item.link);
                                 }
+                            } else if (!isHashLink) {
+                                // Regular page navigation
+                                window.location.href = item.link;
                             }
+                            
                             onItemClick?.();
                         }}
                         className={cn(
                             "relative px-4 py-2 focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full",
                             visible ? "text-gray-900 focus:ring-gray-900" : "text-white focus:ring-white"
                         )}
+                        style={{ pointerEvents: 'auto' } as React.CSSProperties}
                         key={`link-${idx}`}
                         href={item.link}
                         aria-label={`Navigate to ${item.name}`}
                         aria-current={isActive ? "page" : undefined}
+                        data-no-smooth-scroll="true"
                         suppressHydrationWarning
                     >
                         {hovered === idx && (
@@ -240,27 +264,26 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
     return (
         <motion.div
             animate={{
-                backdropFilter: visible ? "blur(10px)" : "none",
-                boxShadow: visible
-                    ? "0 0 24px rgba(34, 42, 53, 1), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
-                    : "none",
-                width: visible ? "90%" : "100%",
-                paddingRight: visible ? "12px" : "0px",
-                paddingLeft: visible ? "12px" : "0px",
-                borderRadius: visible ? "4px" : "2rem",
+                scale: visible ? 0.98 : 1,
                 y: visible ? 20 : 0,
             }}
             transition={{
                 type: "spring",
-                stiffness: 200,
-                damping: 50,
+                stiffness: 400,
+                damping: 35,
+                mass: 0.3,
             }}
             style={{
-                WebkitBackdropFilter: visible ? "blur(10px)" : "none", // Edge/WebKit prefix
+                width: visible ? "90%" : "100%",
+                paddingRight: visible ? "12px" : "0px",
+                paddingLeft: visible ? "12px" : "0px",
+                borderRadius: visible ? "4px" : "2rem",
+                willChange: "transform",
+                transform: "translateZ(0)", // Force GPU acceleration
             } as React.CSSProperties}
             className={cn(
-                "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-                visible && "bg-white/80 dark:bg-neutral-950/80",
+                "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden transition-all duration-300 ease-out",
+                visible && "bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md shadow-lg",
                 className,
             )}
         >

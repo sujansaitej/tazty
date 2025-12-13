@@ -12,7 +12,7 @@ void main() {
 `;
 
 const FRAG = `#version 300 es
-precision highp float;
+precision lowp float; // Use lowp for better performance on mobile devices
 
 uniform float uTime;
 uniform float uAmplitude;
@@ -96,10 +96,11 @@ void main() {
   vec3 rampColor;
   COLOR_RAMP(colors, uv.x, rampColor);
   
-  float height = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25)) * 0.5 * uAmplitude;
-  height = exp(height);
+  // Simplified noise calculation for better performance
+  float height = snoise(vec2(uv.x * 1.2 + uTime * 0.05, uTime * 0.15)) * 0.4 * uAmplitude;
+  height = exp(height * 0.8); // Reduced exp for performance
   height = (uv.y * 2.0 - height + 0.2);
-  float intensity = 0.6 * height;
+  float intensity = 0.5 * height; // Reduced intensity for subtler effect
   
   float midPoint = 0.20;
   float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
@@ -132,26 +133,41 @@ export default function Aurora(props: AuroraProps) {
         const renderer = new Renderer({
             alpha: true,
             premultipliedAlpha: true,
-            antialias: true
+            antialias: false, // Disable antialiasing for better performance
+            dpr: Math.min(window.devicePixelRatio, 1), // Limit to 1x DPR for better performance
+            powerPreference: "high-performance", // Prefer discrete GPU
+            preserveDrawingBuffer: false, // Don't preserve buffer for better performance
         });
         const gl = renderer.gl;
         gl.clearColor(0, 0, 0, 0);
         gl.enable(gl.BLEND);
         gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
         gl.canvas.style.backgroundColor = 'transparent';
+        gl.canvas.style.willChange = 'contents'; // Hint browser for optimization
+        gl.canvas.style.imageRendering = 'optimizeSpeed'; // Optimize rendering
+        
+        // Performance optimizations
+        gl.disable(gl.DITHER); // Disable dithering for performance
+        gl.disable(gl.POLYGON_OFFSET_FILL); // Disable if not needed
+        gl.disable(gl.SAMPLE_ALPHA_TO_COVERAGE); // Disable if not needed
 
         let program: Program | undefined;
 
+        let resizeTimeout: ReturnType<typeof setTimeout> | null = null;
         function resize() {
-            if (!ctn) return;
-            const width = ctn.offsetWidth;
-            const height = ctn.offsetHeight;
-            renderer.setSize(width, height);
-            if (program) {
-                program.uniforms.uResolution.value = [width, height];
-            }
+            if (resizeTimeout) return;
+            resizeTimeout = setTimeout(() => {
+                resizeTimeout = null;
+                if (!ctn) return;
+                const width = ctn.offsetWidth;
+                const height = ctn.offsetHeight;
+                renderer.setSize(width, height);
+                if (program) {
+                    program.uniforms.uResolution.value = [width, height];
+                }
+            }, 100); // Throttle resize events
         }
-        window.addEventListener('resize', resize);
+        window.addEventListener('resize', resize, { passive: true });
 
         const geometry = new Triangle(gl);
         if (geometry.attributes.uv) {
@@ -179,18 +195,65 @@ export default function Aurora(props: AuroraProps) {
         ctn.appendChild(gl.canvas);
 
         let animateId = 0;
-        const update = (t: number) => {
-            animateId = requestAnimationFrame(update);
-            const { time = t * 0.01, speed = 1.0 } = propsRef.current;
-            if (program) {
-                program.uniforms.uTime.value = time * speed * 0.1;
-                program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0;
-                program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
-                const stops = propsRef.current.colorStops ?? colorStops;
-                program.uniforms.uColorStops.value = stops.map((hex: string) => {
+        
+        // Cache color stops to avoid recalculating every frame
+        let cachedColorStops: number[][] | null = null;
+        let lastColorStopsString = JSON.stringify(colorStops);
+        
+        const updateColorStops = () => {
+            const stops = propsRef.current.colorStops ?? colorStops;
+            const stopsString = JSON.stringify(stops);
+            if (stopsString !== lastColorStopsString || !cachedColorStops) {
+                cachedColorStops = stops.map((hex: string) => {
                     const c = new Color(hex);
                     return [c.r, c.g, c.b];
                 });
+                lastColorStopsString = stopsString;
+            }
+            return cachedColorStops;
+        };
+        
+        // Initialize color stops
+        updateColorStops();
+        
+        // Significantly reduced animation speed for better performance
+        let lastFrameTime = 0;
+        const targetFPS = 30; // Reduced to 30fps for better performance
+        const frameInterval = 1000 / targetFPS;
+        
+        const update = (t: number) => {
+            animateId = requestAnimationFrame(update);
+            
+            // Throttle to 30fps for better performance
+            const now = performance.now();
+            if (now - lastFrameTime < frameInterval) {
+                return;
+            }
+            lastFrameTime = now;
+            
+            const { time = t * 0.01, speed = 0.2 } = propsRef.current; // Reduced default speed for smoother animation
+            if (program) {
+                // Update time uniform with reduced speed for smoother, less intensive animation
+                program.uniforms.uTime.value = time * speed * 0.05; // Reduced multiplier
+                
+                // Only update other uniforms if they changed (avoid unnecessary updates)
+                const currentAmplitude = propsRef.current.amplitude ?? 1.0;
+                if (Math.abs(program.uniforms.uAmplitude.value - currentAmplitude) > 0.001) {
+                    program.uniforms.uAmplitude.value = currentAmplitude;
+                }
+                
+                const currentBlend = propsRef.current.blend ?? blend;
+                if (Math.abs(program.uniforms.uBlend.value - currentBlend) > 0.001) {
+                    program.uniforms.uBlend.value = currentBlend;
+                }
+                
+                // Only recalculate color stops if they changed
+                const stops = propsRef.current.colorStops ?? colorStops;
+                const stopsString = JSON.stringify(stops);
+                if (stopsString !== lastColorStopsString) {
+                    program.uniforms.uColorStops.value = updateColorStops();
+                }
+                
                 renderer.render({ scene: mesh });
             }
         };
@@ -200,6 +263,7 @@ export default function Aurora(props: AuroraProps) {
 
         return () => {
             cancelAnimationFrame(animateId);
+            if (resizeTimeout) clearTimeout(resizeTimeout);
             window.removeEventListener('resize', resize);
             if (ctn && gl.canvas.parentNode === ctn) {
                 ctn.removeChild(gl.canvas);

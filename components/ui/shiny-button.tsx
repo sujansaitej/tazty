@@ -56,7 +56,7 @@ export function ShinyButton({
           --shiny-cta-highlight: #00E676; /* Accent Green */
           --shiny-cta-highlight-subtle: #B2FF59; /* Light Green */
           --animation: gradient-angle linear infinite;
-          --duration: 3s;
+          --duration: 5s; /* Slower animation for better performance */
           --shadow-size: 2px;
           --transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
           
@@ -65,9 +65,9 @@ export function ShinyButton({
           overflow: hidden;
           cursor: pointer;
           outline-offset: 4px;
-          padding: 1.25rem 2.5rem;
+          padding: 0.875rem 1.5rem;
           font-family: "Inter", sans-serif;
-          font-size: 1.125rem;
+          font-size: 0.875rem;
           line-height: 1.2;
           font-weight: 500;
           border: 1px solid transparent;
@@ -85,6 +85,33 @@ export function ShinyButton({
           box-shadow: inset 0 0 0 1px var(--shiny-cta-bg-subtle);
           transition: var(--transition);
           transition-property: --gradient-angle-offset, --gradient-percent, --gradient-shine;
+          width: 100%;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        @media (min-width: 640px) {
+          .shiny-cta {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            width: auto;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .shiny-cta {
+            padding: 1.125rem 2.25rem;
+            font-size: 1.0625rem;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .shiny-cta {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.125rem;
+          }
         }
 
         .shiny-cta::before,
@@ -157,13 +184,22 @@ export function ShinyButton({
           animation: calc(var(--duration) * 1.5) breathe linear infinite;
         }
 
-        /* Animate */
+        /* Animate - paused by default, only on hover for better performance */
         .shiny-cta,
         .shiny-cta::before,
         .shiny-cta::after {
-          animation: var(--animation) var(--duration),
-            var(--animation) calc(var(--duration) / 0.4) reverse paused;
+          animation: var(--animation) var(--duration) paused;
           animation-composition: add;
+        }
+        
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+          .shiny-cta,
+          .shiny-cta::before,
+          .shiny-cta::after,
+          .shiny-cta span::before {
+            animation: none !important;
+          }
         }
 
         .shiny-cta:is(:hover, :focus-visible) {
@@ -205,7 +241,7 @@ export function ShinyButton({
       `}</style>
 
             {href ? (
-                <a href={href} target={target} rel={rel} className={cn("shiny-cta inline-block", className)} onClick={onClick}>
+                <a href={href} target={target} rel={rel} className={cn("shiny-cta", className)} onClick={onClick}>
                     <span className="flex items-center justify-center gap-2">{children}</span>
                 </a>
             ) : (

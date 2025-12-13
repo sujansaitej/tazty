@@ -5,21 +5,21 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export function FeaturesGrid() {
     return (
-        <section id="features" className="py-20 lg:py-24 bg-[#0B1120] relative overflow-hidden">
-            <div className="container mx-auto px-4">
-                <div className="mx-auto max-w-2xl text-center mb-16">
-                    <span className="inline-block px-4 py-2 rounded-full bg-[#00C853]/10 text-[#00C853] font-semibold text-sm mb-4">
+        <section id="features" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#0B1120] relative overflow-hidden">
+            <div className="container mx-auto px-4 sm:px-6">
+                <div className="mx-auto max-w-2xl text-center mb-10 sm:mb-12 md:mb-16">
+                    <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#00C853]/10 text-[#00C853] font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
                         Why Choose Tazty?
                     </span>
-                    <h2 className="text-balance text-4xl font-bold tracking-tight text-white lg:text-5xl">
+                    <h2 className="text-balance text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white lg:text-5xl px-2">
                         Celebrating <span className="text-[#00C853]">Madurai's</span> Focus
                     </h2>
-                    <p className="mt-4 text-lg text-gray-300">
+                    <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-gray-300 px-2">
                         We're building more than just a food delivery app - we're creating a platform that celebrates and supports Madurai's rich food culture.
                     </p>
                 </div>
 
-                <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 auto-rows-fr">
+                <ul className="grid grid-cols-1 grid-rows-none gap-3 sm:gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 auto-rows-fr">
                     {/* Hyperlocal Focus - Large Card */}
                     <GridItem
                         area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
@@ -74,26 +74,26 @@ interface GridItemProps {
 
 const GridItem = ({ area, icon, title, description }: GridItemProps) => {
     return (
-        <li className={`min-h-[16rem] sm:min-h-[14rem] list-none ${area}`}>
-            <div className="relative h-full rounded-2xl border border-white/10 p-2 md:rounded-3xl md:p-3 bg-white/5">
+        <li className={`min-h-[14rem] sm:min-h-[16rem] md:min-h-[14rem] list-none ${area}`}>
+            <div className="relative h-full rounded-xl sm:rounded-2xl border border-white/10 p-2 md:rounded-3xl md:p-3 bg-white/5">
                 <GlowingEffect
                     spread={40}
-                    glow={true}
-                    disabled={false}
+                    glow={false}
+                    disabled={true}
                     proximity={64}
                     inactiveZone={0.01}
                     variant="green"
                 />
-                <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl bg-black p-6 md:p-6 shadow-sm ring-1 ring-white/10 transition-shadow hover:shadow-md">
-                    <div className="relative flex flex-1 flex-col justify-between gap-3">
-                        <div className="w-fit rounded-xl bg-[#00C853]/10 p-3 ring-1 ring-[#00C853]/20">
+                <div className="border-0.75 relative flex h-full flex-col justify-between gap-4 sm:gap-6 overflow-hidden rounded-lg sm:rounded-xl bg-black p-4 sm:p-5 md:p-6 shadow-sm ring-1 ring-white/10 transition-shadow hover:shadow-md">
+                    <div className="relative flex flex-1 flex-col justify-between gap-2 sm:gap-3">
+                        <div className="w-fit rounded-lg sm:rounded-xl bg-[#00C853]/10 p-2 sm:p-3 ring-1 ring-[#00C853]/20">
                             {icon}
                         </div>
-                        <div className="space-y-3" style={{ fontFamily: "var(--font-open-sans), system-ui, sans-serif" }}>
-                            <h3 className="pt-0.5 text-xl font-bold text-white md:text-2xl">
+                        <div className="space-y-2 sm:space-y-3" style={{ fontFamily: "var(--font-open-sans), system-ui, sans-serif" }}>
+                            <h3 className="pt-0.5 text-lg sm:text-xl font-bold text-white md:text-2xl">
                                 {title}
                             </h3>
-                            <p className="text-sm text-gray-400 md:text-base">
+                            <p className="text-xs sm:text-sm text-gray-400 md:text-base leading-relaxed">
                                 {description}
                             </p>
                         </div>

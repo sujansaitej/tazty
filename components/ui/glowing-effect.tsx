@@ -27,7 +27,7 @@ const GlowingEffect = memo(
         className,
         movementDuration = 2,
         borderWidth = 1,
-        disabled = true,
+        disabled = true, // Default to disabled for better performance
     }: GlowingEffectProps) => {
         const containerRef = useRef<HTMLDivElement>(null);
         const lastPosition = useRef({ x: 0, y: 0 });
@@ -100,8 +100,43 @@ const GlowingEffect = memo(
         useEffect(() => {
             if (disabled) return;
 
-            const handleScroll = () => handleMove();
-            const handlePointerMove = (e: PointerEvent) => handleMove(e);
+            let scrollRafId: number | null = null;
+            let pointerRafId: number | null = null;
+            let lastScrollUpdate = 0;
+            let lastPointerUpdate = 0;
+            const throttleDelay = 16; // ~60fps for scroll/pointer updates (16ms = 60fps)
+
+            const handleScroll = () => {
+                const now = performance.now();
+                if (now - lastScrollUpdate < throttleDelay) {
+                    if (!scrollRafId) {
+                        scrollRafId = requestAnimationFrame(() => {
+                            scrollRafId = null;
+                            lastScrollUpdate = performance.now();
+                            handleMove();
+                        });
+                    }
+                    return;
+                }
+                lastScrollUpdate = now;
+                handleMove();
+            };
+
+            const handlePointerMove = (e: PointerEvent) => {
+                const now = performance.now();
+                if (now - lastPointerUpdate < throttleDelay) {
+                    if (!pointerRafId) {
+                        pointerRafId = requestAnimationFrame(() => {
+                            pointerRafId = null;
+                            lastPointerUpdate = performance.now();
+                            handleMove(e);
+                        });
+                    }
+                    return;
+                }
+                lastPointerUpdate = now;
+                handleMove(e);
+            };
 
             window.addEventListener("scroll", handleScroll, { passive: true });
             document.body.addEventListener("pointermove", handlePointerMove, {
@@ -112,6 +147,8 @@ const GlowingEffect = memo(
                 if (animationFrameRef.current) {
                     cancelAnimationFrame(animationFrameRef.current);
                 }
+                if (scrollRafId) cancelAnimationFrame(scrollRafId);
+                if (pointerRafId) cancelAnimationFrame(pointerRafId);
                 window.removeEventListener("scroll", handleScroll);
                 document.body.removeEventListener("pointermove", handlePointerMove);
             };

@@ -60,44 +60,44 @@ export function FAQ() {
   ]
 
   return (
-    <section id="faq" className="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <span className="inline-block px-4 py-2 rounded-full bg-[#00C853]/10 text-[#00C853] font-semibold text-sm mb-4">
+    <section id="faq" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="mx-auto mb-10 sm:mb-12 md:mb-16 max-w-3xl text-center">
+          <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#00C853]/10 text-[#00C853] font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
             Got Questions?
           </span>
-          <h2 className="mb-4 text-balance text-4xl font-bold lg:text-5xl text-gray-900">
+          <h2 className="mb-3 sm:mb-4 text-balance text-2xl sm:text-3xl md:text-4xl font-bold lg:text-5xl text-gray-900 px-2">
             Frequently Asked <span className="text-[#00C853]">Questions</span>
           </h2>
-          <p className="text-balance text-lg text-gray-600">
+          <p className="text-balance text-sm sm:text-base md:text-lg text-gray-600 px-2">
             For more details, check our comprehensive FAQs page.
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto mb-12 grid md:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto mb-8 sm:mb-10 md:mb-12 grid md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`rounded-2xl border transition-all duration-300 h-fit ${openIndex === index
+              className={`rounded-xl sm:rounded-2xl border transition-all duration-300 h-fit ${openIndex === index
                 ? "border-[#00C853] bg-[#0B1120] shadow-lg"
                 : "border-gray-800 bg-[#0B1120] hover:border-gray-700"
                 }`}
             >
               <button
-                className="w-full px-6 py-5 flex items-center justify-between text-left"
+                className="w-full px-4 sm:px-5 md:px-6 py-4 sm:py-5 flex items-center justify-between text-left gap-2 sm:gap-3"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0 flex-1">
                   <div
-                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-colors flex-shrink-0 ${openIndex === index ? "bg-[#00C853] text-white" : "bg-[#00C853]/10 text-[#00C853]"
+                    className={`w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg sm:rounded-xl flex items-center justify-center transition-colors flex-shrink-0 ${openIndex === index ? "bg-[#00C853] text-white" : "bg-[#00C853]/10 text-[#00C853]"
                       }`}
                   >
-                    <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <HelpCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
                   </div>
-                  <span className="font-semibold text-white pr-4 text-sm sm:text-base">{faq.question}</span>
+                  <span className="font-semibold text-white pr-2 sm:pr-4 text-xs sm:text-sm md:text-base break-words">{faq.question}</span>
                 </div>
                 <ChevronDown
-                  className={`w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 ${openIndex === index ? "rotate-180 text-white" : ""
+                  className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 ${openIndex === index ? "rotate-180 text-white" : ""
                     }`}
                 />
               </button>
@@ -105,7 +105,7 @@ export function FAQ() {
                 className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
               >
-                <p className="px-6 pb-5 text-gray-300 leading-relaxed pl-4 sm:pl-20 text-sm sm:text-base">{faq.answer}</p>
+                <p className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 text-gray-300 leading-relaxed pl-3 sm:pl-4 md:pl-20 text-xs sm:text-sm md:text-base">{faq.answer}</p>
               </div>
             </div>
           ))}
@@ -113,9 +113,9 @@ export function FAQ() {
 
         <div className="text-center">
           <Link href="/buyer-faqs">
-            <span className="inline-flex items-center justify-center gap-2 bg-[#00C853] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#00A843] transition-colors shadow-lg hover:shadow-xl cursor-pointer">
+            <span className="inline-flex items-center justify-center gap-2 bg-[#00C853] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-[#00A843] transition-colors shadow-lg hover:shadow-xl cursor-pointer text-sm sm:text-base">
               View All FAQs
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </span>
           </Link>
         </div>

@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
-    const rows = new Array(150).fill(1);
-    const cols = new Array(100).fill(1);
+    // Further reduced to 20x12 (240 elements) for much better performance
+    const rows = new Array(20).fill(1);
+    const cols = new Array(12).fill(1);
 
     // Updated colors to match Tazty's Green & White theme
     const colors = [
@@ -39,13 +40,7 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
                 >
                     {cols.map((_, j) => (
                         <motion.div
-                            whileHover={{
-                                backgroundColor: getRandomColor(),
-                                transition: { duration: 0 },
-                            }}
-                            animate={{
-                                transition: { duration: 2 },
-                            }}
+                            // Disabled hover animation for better performance
                             key={`col` + j}
                             // Changed border color to white/20
                             className="w-16 h-8 border-r border-t border-white/20 relative"

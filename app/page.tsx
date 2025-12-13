@@ -17,13 +17,13 @@ export default function Home() {
     <main className="min-h-screen scroll-smooth">
       <Navbar />
       <Hero />
-      <div className="bg-white py-4 overflow-hidden w-full">
-        <ScrollVelocity
-          texts={['Tazty Delivery •', 'Fresh Food •', 'Fast Service •']}
-          velocity={50}
-          numCopies={20}
-          className="text-[#004D40] text-4xl font-extrabold"
-        />
+      {/* Simplified scroll velocity - using CSS animation instead of heavy JS */}
+      <div className="bg-white py-3 sm:py-4 overflow-hidden w-full">
+        <div className="whitespace-nowrap animate-scroll-simple">
+          <span className="inline-block text-[#004D40] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold">
+            Tazty Delivery • Fresh Food • Fast Service • Tazty Delivery • Fresh Food • Fast Service • Tazty Delivery • Fresh Food • Fast Service •
+          </span>
+        </div>
       </div>
       <Stats />
       <FeaturesGrid />
@@ -32,7 +32,7 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <Contact />
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
         <DownloadApp />
         <Newsletter />
       </div>

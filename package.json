@@ -53,6 +53,7 @@
     "next": "16.0.7",
     "next-themes": "latest",
     "ogl": "latest",
+    "pnpm": "^10.25.0",
     "react": "19.2.0",
     "react-day-picker": "9.8.0",
     "react-dom": "19.2.0",
@@ -73,6 +74,6 @@
     "postcss": "^8.5",
     "tailwindcss": "^4.1.9",
     "tw-animate-css": "1.3.3",
-    "typescript": "^5"
+    "typescript": "^5.1.0"
   }
 }

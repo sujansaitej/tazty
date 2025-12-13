@@ -147,8 +147,9 @@ const LightRays: React.FC<LightRaysProps> = ({
             if (!containerRef.current) return;
 
             const renderer = new Renderer({
-                dpr: Math.min(window.devicePixelRatio, 2),
-                alpha: true
+                dpr: Math.min(window.devicePixelRatio, 2), // Allow up to 2x DPR for quality while maintaining 60fps
+                alpha: true,
+                antialias: false // Disable antialiasing for better performance
             });
             rendererRef.current = renderer;
 
@@ -337,7 +338,16 @@ void main() {
                 }
             };
 
-            window.addEventListener('resize', updatePlacement);
+            let resizeTimeout: ReturnType<typeof setTimeout> | null = null;
+            const throttledResize = () => {
+                if (resizeTimeout) return;
+                resizeTimeout = setTimeout(() => {
+                    resizeTimeout = null;
+                    updatePlacement();
+                }, 100); // Throttle resize events
+            };
+            
+            window.addEventListener('resize', throttledResize, { passive: true });
             updatePlacement();
             animationIdRef.current = requestAnimationFrame(loop);
 
@@ -346,8 +356,9 @@ void main() {
                     cancelAnimationFrame(animationIdRef.current);
                     animationIdRef.current = null;
                 }
+                if (resizeTimeout) clearTimeout(resizeTimeout);
 
-                window.removeEventListener('resize', updatePlacement);
+                window.removeEventListener('resize', throttledResize);
 
                 if (renderer) {
                     try {
@@ -432,7 +443,28 @@ void main() {
     ]);
 
     useEffect(() => {
+        let rafId: number | null = null;
+        let lastUpdate = 0;
+        const throttleDelay = 16; // ~60fps for mouse updates (16ms = 60fps)
+        
         const handleMouseMove = (e: MouseEvent) => {
+            const now = performance.now();
+            if (now - lastUpdate < throttleDelay) {
+                if (!rafId) {
+                    rafId = requestAnimationFrame(() => {
+                        rafId = null;
+                        lastUpdate = performance.now();
+                        if (!containerRef.current || !rendererRef.current) return;
+                        const rect = containerRef.current.getBoundingClientRect();
+                        const x = (e.clientX - rect.left) / rect.width;
+                        const y = (e.clientY - rect.top) / rect.height;
+                        mouseRef.current = { x, y };
+                    });
+                }
+                return;
+            }
+            lastUpdate = now;
+            
             if (!containerRef.current || !rendererRef.current) return;
             const rect = containerRef.current.getBoundingClientRect();
             const x = (e.clientX - rect.left) / rect.width;
@@ -441,8 +473,11 @@ void main() {
         };
 
         if (followMouse) {
-            window.addEventListener('mousemove', handleMouseMove);
-            return () => window.removeEventListener('mousemove', handleMouseMove);
+            window.addEventListener('mousemove', handleMouseMove, { passive: true });
+            return () => {
+                window.removeEventListener('mousemove', handleMouseMove);
+                if (rafId) cancelAnimationFrame(rafId);
+            };
         }
     }, [followMouse]);
 

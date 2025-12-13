@@ -8,22 +8,22 @@ export default function PartnerPrivacy() {
     return (
         <main className="min-h-screen bg-gray-50">
             <Navbar />
-            <div className="container mx-auto px-4 py-24 lg:py-32">
-                <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-sm border border-gray-100 p-8 lg:p-12">
-                    <h1 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">Partner Privacy Policy</h1>
-                    <p className="text-gray-500 mb-8">Last updated: November 5, 2025</p>
+            <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-24 lg:py-32">
+                <div className="max-w-4xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 p-6 sm:p-8 md:p-10 lg:p-12">
+                    <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">Partner Privacy Policy</h1>
+                    <p className="text-gray-500 mb-6 sm:mb-7 md:mb-8 text-sm sm:text-base">Last updated: November 5, 2025</p>
 
-                    <div className="prose prose-green max-w-none text-gray-600 space-y-6">
+                    <div className="prose prose-green max-w-none text-gray-600 space-y-4 sm:space-y-5 md:space-y-6 prose-sm sm:prose-base">
                         <p>This unified Privacy Policy describes how Valar Digital Commerce Private Limited ("Tazty", "Valar", "we", "us", "our") collects, uses, shares and protects personal data when merchants/sellers ("you", "your") use (a) Tazty Restaurant Partner App and (b) Valar Seller App. This policy applies to seller/merchant users, their authorized staff, and prospective sellers who undergo KYC or onboarding with us, including those connecting via ONDC-compatible NPs.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">1. Your Consent & Policy Changes</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">1. Your Consent & Policy Changes</h3>
                         <p>By using the Partner Platform you agree to the collection, transfer, use, storage and disclosure of information as described in this Policy. We may update this Policy periodically; material changes will be notified via the Platform or email. Continued use after notification constitutes acceptance of the updated Policy.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">2. Scope</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">2. Scope</h3>
                         <p>This policy governs personal data processed through the Tazty Restaurant Partner App and Valar Seller App, our merchant back-office portals, and related APIs/SDKs, including integrations with ONDC network participants, logistics partners, and payment service providers.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">3. What Data We Collect</h3>
-                        <h4 className="font-bold text-gray-800">3.1 Information You Provide (KYC & Onboarding)</h4>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">3. What Data We Collect</h3>
+                        <h4 className="font-bold text-gray-800 text-base sm:text-lg">3.1 Information You Provide (KYC & Onboarding)</h4>
                         <ul className="list-disc pl-5">
                             <li><strong>Identity & KYC:</strong> name, business name, date of birth, GSTIN, FSSAI number, PAN, Aadhaar (limited details), etc.</li>
                             <li><strong>Contact & Account:</strong> phone, email, addresses, profile photos, authorized staff details.</li>
@@ -33,10 +33,10 @@ export default function PartnerPrivacy() {
                             <li><strong>Support & correspondence:</strong> messages, complaints, feedback.</li>
                         </ul>
 
-                        <h4 className="font-bold text-gray-800">3.2 Information Collected Automatically</h4>
+                        <h4 className="font-bold text-gray-800 text-base sm:text-lg">3.2 Information Collected Automatically</h4>
                         <p>Device & Technical info; Usage metadata; Location data where you grant permission.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">4. Why We Use Your Data</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">4. Why We Use Your Data</h3>
                         <ul className="list-disc pl-5">
                             <li>Onboarding & KYC</li>
                             <li>Order & payment processing</li>
@@ -47,25 +47,25 @@ export default function PartnerPrivacy() {
                             <li>Product improvement</li>
                         </ul>
 
-                        <h3 className="font-bold text-gray-900 text-xl">5. Legal Basis & Consent (India)</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">5. Legal Basis & Consent (India)</h3>
                         <p>We process personal data in accordance with the Digital Personal Data Protection Act, 2023 (DPDP Act) and applicable IT laws/rules.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">6. Data Sharing & Recipients</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">6. Data Sharing & Recipients</h3>
                         <p>We share information only with parties who need it to provide services or where required by law, such as Payment & Payout Partners, Logistics Partners, ONDC Participants, Verification Vendors, and Government authorities.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">7. ONDC-Specific Disclosures</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">7. ONDC-Specific Disclosures</h3>
                         <p>For merchants operating via ONDC: certain order and catalog metadata flows to other network participants as required by the Beckn protocol and ONDC specifications.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">8. Data Storage, Security & Retention</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">8. Data Storage, Security & Retention</h3>
                         <p>We may store/process data on servers located inside India. We implement reasonable technical and organizational safeguards. We retain personal data for as long as needed for the purposes described, and as required by law.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">9. Your Choices & Rights</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">9. Your Choices & Rights</h3>
                         <p>You have rights with respect to the personal data we hold about you, subject to legal limitations. These may include the right to access, correct, delete, or object to certain processing. Contact <a href="mailto:support@tazty.in" className="text-[#00C853]">support@tazty.in</a> to exercise these rights.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">10. Account Deletion & Data Erasure Procedure</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">10. Account Deletion & Data Erasure Procedure</h3>
                         <p>To delete your account you must submit a request to <a href="mailto:support@tazty.in" className="text-[#00C853]">support@tazty.in</a>. We verification identity and check for outstanding obligations before deleting/anonymising data.</p>
 
-                        <h3 className="font-bold text-gray-900 text-xl">11. Contact & Grievance Officer</h3>
+                        <h3 className="font-bold text-gray-900 text-lg sm:text-xl">11. Contact & Grievance Officer</h3>
                         <div className="bg-gray-50 p-4 rounded-xl">
                             <p><strong>Email:</strong> <a href="mailto:support@tazty.in" className="text-[#00C853]">support@tazty.in</a> or <a href="mailto:support@valardigital.in" className="text-[#00C853]">support@valardigital.in</a></p>
                             <p><strong>Phone:</strong> +91 9952520699</p>
