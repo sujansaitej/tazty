@@ -35,7 +35,7 @@ export function Newsletter() {
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Stay Updated with <span className="text-[#00C853]">Tazty</span>
           </h2>
-          <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto">
             Subscribe to our newsletter for exclusive offers, new restaurant updates, and food recommendations delivered to your inbox.
           </p>
 

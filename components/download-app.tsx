@@ -37,7 +37,7 @@ export function DownloadApp() {
                   rel="noopener noreferrer"
                 >
                   <Smartphone className="w-5 h-5 mr-2" />
-                  Download Buyer App
+                  Download Tazty App
                 </a>
               </Button>
               <Button
@@ -51,7 +51,7 @@ export function DownloadApp() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Seller App
+                  Restaurant Partner App
                 </a>
               </Button>
             </div>
