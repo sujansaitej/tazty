@@ -6,7 +6,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
- 
+  // Ensure CSS is properly processed in production
+  experimental: {
+    optimizePackageImports: ['lucide-react', '@tabler/icons-react'],
+  },
 }
 
 export default nextConfig
