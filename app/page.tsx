@@ -11,6 +11,7 @@ import { DownloadApp } from "@/components/download-app"
 import { Newsletter } from "@/components/newsletter"
 import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -32,9 +33,15 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <Contact />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden lg:overflow-visible">
         <DownloadApp />
         <Newsletter />
+        {/* Phone Image - Centered and overlapping both sections - Only visible on xl screens and above */}
+        <div className="hidden xl:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+          <div className="relative w-[130px] xl:w-[150px] 2xl:w-[170px] h-[260px] xl:h-[300px] 2xl:h-[340px] drop-shadow-2xl">
+            <Image src="/app-screen-home.png" alt="Tazty App" fill className="object-contain" />
+          </div>
+        </div>
       </div>
       <Footer />
       <ScrollToTop />

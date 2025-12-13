@@ -53,12 +53,12 @@ export function Contact() {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 mb-10 sm:mb-12 md:mb-16 max-w-sm sm:max-w-none mx-auto sm:mx-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 mb-10 sm:mb-12 md:mb-16 max-w-sm sm:max-w-2xl lg:max-w-none mx-auto sm:mx-auto lg:mx-0">
           {contactInfo.map((item, index) => {
             const Icon = item.icon
             const CardContent = (
               <div className="w-full sm:w-full">
-                <GlowingStarsBackgroundCard className="h-[280px] sm:h-[280px] md:h-[300px] lg:h-[320px] w-full transition-all duration-500 ease-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00C853]/20 cursor-pointer">
+                <GlowingStarsBackgroundCard className="h-[280px] sm:h-[280px] md:h-[300px] lg:h-[300px] xl:h-[320px] w-full transition-all duration-500 ease-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#00C853]/20 cursor-pointer">
                   <GlowingStarsTitle className="text-lg sm:text-xl transition-colors duration-300 mb-2 sm:mb-3" style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale', textRendering: 'optimizeLegibility' }}>{item.title}</GlowingStarsTitle>
                   <div className="flex justify-between items-end mt-auto gap-3 sm:gap-4">
                     <div className="flex flex-col gap-1.5 sm:gap-2 min-w-0 flex-1 pr-2 sm:pr-3">
@@ -118,7 +118,7 @@ export function Contact() {
 
         {/* Partnership CTA */}
         <div className="w-full">
-          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#00C853] to-[#018c3a] p-6 sm:p-8 md:p-10 lg:p-12 lg:px-16 xl:px-24 min-h-[200px] sm:min-h-[230px] md:min-h-[250px] flex items-center justify-center">
+          <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#00C853] to-[#018c3a] p-6 sm:p-8 md:p-10 lg:p-12 lg:px-12 xl:px-16 2xl:px-24 min-h-[200px] sm:min-h-[230px] md:min-h-[250px] flex items-center justify-center">
             {/* Disabled Boxes animation for better performance - using simple gradient overlay instead */}
             <div className="absolute inset-0 w-full h-full z-0 pointer-events-none bg-gradient-to-br from-[#00C853]/20 to-[#018c3a]/20 opacity-50" />
 
@@ -139,7 +139,7 @@ export function Contact() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 w-full sm:w-auto lg:flex-shrink-0 order-3 lg:order-3">
+              <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 w-full sm:w-auto lg:flex-shrink-0 order-3 lg:order-3 lg:min-w-0">
                 <a href="tel:+919952520699" className="w-full sm:w-auto">
                   <Button
                     size="lg"

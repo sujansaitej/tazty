@@ -19,10 +19,10 @@ export function FeaturesGrid() {
                     </p>
                 </div>
 
-                <ul className="grid grid-cols-1 grid-rows-none gap-3 sm:gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 auto-rows-fr">
+                <ul className="grid grid-cols-1 grid-rows-none gap-3 sm:gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 lg:max-h-[36rem] lg:grid-rows-2 xl:max-h-[34rem] auto-rows-fr">
                     {/* Hyperlocal Focus - Large Card */}
                     <GridItem
-                        area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
+                        area="md:[grid-area:1/1/2/7] lg:[grid-area:1/1/2/5] xl:[grid-area:1/1/2/5]"
                         icon={<MapPin className="h-6 w-6 text-[#00C853]" />}
                         title="Hyperlocal Focus"
                         description="Discover amazing restaurants and food joints in your immediate neighborhood. We bring the local gems to your table."
@@ -30,7 +30,7 @@ export function FeaturesGrid() {
 
                     {/* Lightning Fast - Wide Card */}
                     <GridItem
-                        area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
+                        area="md:[grid-area:1/7/2/13] lg:[grid-area:2/1/3/5] xl:[grid-area:2/1/3/5]"
                         icon={<Clock className="h-6 w-6 text-[#00C853]" />}
                         title="Lightning Fast"
                         description="15-minute average delivery time from local restaurants to your doorstep. Hot and fresh."
@@ -38,7 +38,7 @@ export function FeaturesGrid() {
 
                     {/* Support Local - Medium Card */}
                     <GridItem
-                        area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
+                        area="md:[grid-area:2/1/3/7] lg:[grid-area:1/5/3/8] xl:[grid-area:1/5/3/8]"
                         icon={<Heart className="h-6 w-6 text-[#00C853]" />}
                         title="Support Local"
                         description="Every order directly supports local restaurant owners and the Madurai food culture."
@@ -46,7 +46,7 @@ export function FeaturesGrid() {
 
                     {/* Quality Assured - Wide Card */}
                     <GridItem
-                        area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
+                        area="md:[grid-area:2/7/3/13] lg:[grid-area:1/8/2/13] xl:[grid-area:1/8/2/13]"
                         icon={<ShieldCheck className="h-6 w-6 text-[#00C853]" />}
                         title="Quality Assured"
                         description="Curated restaurants with verified quality and hygiene standards. We ensure excellence."
@@ -54,7 +54,7 @@ export function FeaturesGrid() {
 
                     {/* Built on ONDC - Large Bottom Card */}
                     <GridItem
-                        area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
+                        area="md:[grid-area:3/1/4/13] lg:[grid-area:2/8/3/13] xl:[grid-area:2/8/3/13]"
                         icon={<Network className="h-6 w-6 text-[#00C853]" />}
                         title="Built on ONDC"
                         description="Powered by ONDC — an open, interoperable network based on the Beckn protocol. Fair and open."

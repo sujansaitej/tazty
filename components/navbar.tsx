@@ -32,26 +32,27 @@ export function Navbar() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4 relative z-20 flex-shrink-0 ml-auto">
+          <div className="flex items-center gap-2 sm:gap-3 md:gap-4 relative z-20 flex-shrink-0 ml-auto">
             <NavbarButton
               as="a"
               href="https://seller.tazty.in/"
               target="_blank"
               variant="secondary"
-              className="bg-[#00C853] text-white hover:bg-[#00A843] border-none flex items-center gap-2"
+              className="bg-[#00C853] text-white hover:bg-[#00A843] border-none flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm px-2 sm:px-3 md:px-4 py-1.5 sm:py-2"
             >
-              <Store className="w-4 h-4" />
-              Partner
+              <Store className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <span className="hidden sm:inline">Partner</span>
             </NavbarButton>
             <NavbarButton
               as="a"
               href="https://play.google.com/store/apps/details?id=in.tazty.buyer"
               target="_blank"
               variant="primary"
-              className="bg-[#00C853] text-white hover:bg-[#00A843] border-none flex items-center gap-2"
+              className="bg-[#00C853] text-white hover:bg-[#00A843] border-none flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm px-2 sm:px-3 md:px-4 py-1.5 sm:py-2"
             >
-              <Download className="w-4 h-4" />
-              Download App
+              <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <span className="hidden sm:inline">Download App</span>
+              <span className="sm:hidden">App</span>
             </NavbarButton>
           </div>
         </NavBody>

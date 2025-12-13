@@ -27,7 +27,7 @@ export function Hero() {
         <div className="absolute bottom-40 left-4 sm:left-20 text-3xl sm:text-4xl md:text-5xl opacity-15 animate-float-simple" style={{ animationDelay: "4s", willChange: 'transform' }}>🥗</div>
       </div>
 
-      <div className="container relative z-10 mx-auto px-3 sm:px-4 py-12 sm:py-16 md:py-20 text-center overflow-hidden">
+      <div className="container relative z-10 mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-12 sm:py-16 md:py-20 text-center overflow-hidden">
         <div className="mx-auto max-w-6xl w-full">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
             <div className="flex items-center gap-2 bg-white px-3 sm:px-4 h-9 sm:h-10 rounded-full shadow-md">
@@ -92,7 +92,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-center gap-3 sm:gap-4 md:gap-4 lg:gap-5 xl:gap-6 w-full max-w-5xl mx-auto px-2 sm:px-3 md:px-4">
+          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-center gap-3 sm:gap-4 md:gap-4 lg:gap-4 xl:gap-5 2xl:gap-6 w-full max-w-5xl mx-auto px-2 sm:px-3 md:px-4">
             {/* 1. Restaurant Partner Button */}
             <a
               href="https://play.google.com/store/apps/details?id=in.tazty.seller"

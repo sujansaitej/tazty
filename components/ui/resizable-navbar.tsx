@@ -114,12 +114,12 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
             }}
             style={{
                 minWidth: "min(800px, 100%)",
-                width: visible ? "60%" : "100%",
+                width: visible ? "min(90%, 1200px)" : "100%",
                 willChange: "transform",
                 transform: "translateZ(0)", // Force GPU acceleration
             } as React.CSSProperties}
             className={cn(
-                "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent transition-all duration-300 ease-out",
+                "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-3 sm:px-4 py-2 lg:flex dark:bg-transparent transition-all duration-300 ease-out",
                 visible 
                     ? "bg-white text-gray-900 shadow-lg backdrop-blur-md" 
                     : "bg-transparent",

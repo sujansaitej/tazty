@@ -25,9 +25,9 @@ export function Newsletter() {
   }
 
   return (
-    <section className="py-12 sm:py-14 md:py-16 bg-gray-900 flex flex-col justify-center h-full">
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className="py-12 sm:py-14 md:py-16 bg-gray-900 flex flex-col justify-center h-full overflow-hidden lg:overflow-visible">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="max-w-md mx-auto text-center xl:ml-[100px] 2xl:ml-[110px] relative z-20">
           <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-[#00C853]/20 mb-4 sm:mb-5 md:mb-6">
             <Mail className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#00C853]" />
           </div>
